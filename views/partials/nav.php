@@ -88,7 +88,7 @@
 							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 					</svg>
 				</span>
-				<input class="outline-none p-2 rounded-full text-black placeholder:text-black font-bold" type="text" placeholder="Search..." />
+				<input class="outline-none text-red-500 placeholder:text-black" type="search" placeholder="Search..." />
 			</div>
 		</div>
 	</div>
