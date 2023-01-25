@@ -6,4 +6,4 @@ require 'models/movie.model.php';
 
 $posts = getPosts();
 
-require "views/seller/seller.view.php";
+require "views/register/register.view.php";
