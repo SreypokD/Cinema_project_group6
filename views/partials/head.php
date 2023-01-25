@@ -6,5 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATE MOVIE.</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
