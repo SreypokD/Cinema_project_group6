@@ -1,6 +1,6 @@
 <?php
 
-$heading = "detail Page";
+$heading = "detail";
 
 
 require "views/detail/detail.view.php";
