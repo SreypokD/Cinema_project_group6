@@ -1,14 +1,14 @@
-<footer class="p-4 bg-white sm:p-6 dark:bg-black">
+<footer class="p-4 bg-black sm:p-6 dark:bg-black">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="https://flowbite.com/" class="flex items-center">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DATE MOVIE.</span>
+                <span class="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">DATE MOVIE.</span>
             </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Page</h2>
-                <ul class="text-gray-600 dark:text-gray-400">
+                <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Page</h2>
+                <ul class="text-white dark:text-gray-400">
                     <li class="mb-4">
                         <a href="/" class="hover:underline ">Home</a>
                     </li>
@@ -21,8 +21,8 @@
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                <ul class="text-gray-600 dark:text-gray-400">
+                <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Resources</h2>
+                <ul class="text-white dark:text-gray-400">
                     <li class="mb-4">
                         <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
                     </li>
@@ -32,8 +32,8 @@
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
-                <ul class="text-gray-600 dark:text-gray-400">
+                <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase ">Contact</h2>
+                <ul class="text-white dark:text-gray-400">
                     <li class="mb-4">
                         <a href="#" class="hover:underline">+885 962646651</a>
                     </li>
