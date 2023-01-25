@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2023 at 08:41 AM
+-- Generation Time: Jan 25, 2023 at 09:36 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -40,7 +40,9 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`booking_id`, `total_price`, `date`, `user_id`, `show_id`) VALUES
-(1, 3.5, '2023-01-25 10:37:05', 1, 1);
+(1, 3.5, '2023-01-25 10:37:05', 1, 1),
+(2, 2.5, '2023-01-25 15:29:55', 3, 1),
+(3, 2.5, '2023-01-25 15:29:55', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -99,6 +101,16 @@ CREATE TABLE `payments` (
   `booking_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`payment_id`, `booking_id`) VALUES
+(1, 1),
+(3, 1),
+(2, 2),
+(4, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -106,10 +118,20 @@ CREATE TABLE `payments` (
 --
 
 CREATE TABLE `seats` (
-  `seat_id` int(11) NOT NULL,
+  `seat_id` varchar(20) NOT NULL,
   `booking_id` int(11) NOT NULL,
   `hall_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `seats`
+--
+
+INSERT INTO `seats` (`seat_id`, `booking_id`, `hall_id`) VALUES
+('A7', 3, 3),
+('A9', 2, 2),
+('B9', 2, 2),
+('D8', 3, 3);
 
 -- --------------------------------------------------------
 
@@ -158,7 +180,8 @@ CREATE TABLE `shows` (
 
 INSERT INTO `shows` (`show_id`, `start_date`, `end_date`, `format`, `subtitle`, `movie_id`, `hall_id`) VALUES
 (1, '0000-00-00 00:00:00', '2023-04-16 00:00:00', '2D', 'English', 1, 1),
-(2, '2023-01-22 00:00:00', '2023-05-22 00:00:00', '2D', 'English', 3, 1);
+(2, '2023-01-22 00:00:00', '2023-05-22 00:00:00', '2D', 'English', 3, 1),
+(3, '2023-02-25 00:00:00', '2023-05-25 00:00:00', '2D', 'English', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -280,7 +303,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `halls`
@@ -298,13 +321,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `seats`
---
-ALTER TABLE `seats`
-  MODIFY `seat_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sellers`
@@ -316,7 +333,7 @@ ALTER TABLE `sellers`
 -- AUTO_INCREMENT for table `shows`
 --
 ALTER TABLE `shows`
-  MODIFY `show_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `show_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tickets`
