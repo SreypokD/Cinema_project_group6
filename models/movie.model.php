@@ -3,7 +3,7 @@
 function createPost(string $title, string $description) : bool
 {
     global $connection;
-    $statement = $connection->prepare("insert into posts (title, description) values (:title, :description)");
+    $statement = $connection->prepare("INSERT INTO posts (title, description) values (:title, :description)");
     $statement->execute([
         ':title' => $title,
         ':description' => $description
