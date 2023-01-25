@@ -4,7 +4,7 @@
 
 <div class="card mt-5">
     <div class="card-body">
-        <form action="../../controllers/post/post.create.controller.php" method="post">
+        <form action="../../controllers/movie/movie.create.controller.php" method="post">
             <div class="form-group">
                 <input type="text" placeholder="title" class="form-control" name="title">
             </div>
