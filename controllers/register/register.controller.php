@@ -2,8 +2,8 @@
 
 $heading = "Movie Page";
 
-require 'models/movie.model.php';
+// require 'models/movie.model.php';
 
-$posts = getPosts();
+// $posts = getPosts();
 
 require "views/register/register.view.php";

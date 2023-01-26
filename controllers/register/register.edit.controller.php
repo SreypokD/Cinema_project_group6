@@ -1,11 +1,11 @@
 <?php
-require '../../database/database.php';
+// require '../../database/database.php';
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-$id = $_GET["id"] ? $_GET["id"] : null;
-if (isset($id)) {
-    require "../../models/post.model.php";
-    $post = getPost($id);
+//     if (!empty($_POST['title']) and !empty($_POST['description'])) {
+//         require_once('../../models/post.model.php');
+//         updatePost($_POST['title'], $_POST['description'], $_POST['id']);
 
-    require "../../views/post/post.edit.view.php";
-}
-
+//         header('location: /post');
+//     }
+// }
