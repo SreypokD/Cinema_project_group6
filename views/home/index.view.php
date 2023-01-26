@@ -13,7 +13,7 @@
           </div>
         
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Avatar part 03</div>
+          <div class="font-bold text-xl mb-2">Avatar part 3</div>
         </div>
         <div class="px-6 pt-4 pb-2">
           <span class="inline-block bg-gray-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">Sunday</span>
@@ -30,7 +30,7 @@
         <div class="px-6 py-4">
         </div>
         
-          <div class="font-bold text-xl mb-2">Avatar part 02</div>
+          <div class="font-bold text-xl mb-2">Avatar part 2</div>
         </div>
         <div class="px-6 pt-4 pb-2">
           <span class="inline-block bg-gray-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">Friday</span>
@@ -40,13 +40,13 @@
       </div>
 
       <!--Card 3-->
-      
+
       <div class="rounded overflow-hidden shadow-lg bg-red-800">
         <div class="w-full">
             <img class="w-full" src="https://lumiere-a.akamaihd.net/v1/images/csr_yt_ae2ddc55.jpeg" alt="">
         </div>
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Avatar part 01</div>
+          <div class="font-bold text-xl mb-2">Avatar part 1</div>
         </div>
         <div class="px-6 pt-4 pb-2">
           <span class="inline-block bg-gray-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">Thursday</span>
