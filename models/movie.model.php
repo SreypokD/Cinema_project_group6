@@ -1,52 +1,62 @@
 <?php
+//database
+require "../database/database.php";
 
-function createPost(string $title, string $description) : bool
+function getMovie() : array
 {
     global $connection;
-    $statement = $connection->prepare("INSERT INTO posts (title, description) values (:title, :description)");
-    $statement->execute([
-        ':title' => $title,
-        ':description' => $description
-
-    ]);
-
-    return $statement->rowCount() > 0;
+    $statement = $connection->query("SELECT * FROM movies WHERE movie_id ORDER BY movie_id DESC");
+    $movieItems = $statement->fetchAll();
+    return $movieItems;
 }
 
-function getPost(int $id) : array
-{
-    global $connection;
-    $statement = $connection->prepare("select * from posts where id = :id");
-    $statement->execute([':id' => $id]);
-    return $statement->fetch();
-}
+// function createPost(string $title, string $description) : bool
+// {
+//     global $connection;
+//     $statement = $connection->prepare("INSERT INTO posts (title, description) values (:title, :description)");
+//     $statement->execute([
+//         ':title' => $title,
+//         ':description' => $description
 
-function getPosts() : array
-{
-    global $connection;
-    $statement = $connection->prepare("select * from posts");
-    $statement->execute();
-    return $statement->fetchAll();
-}
+//     ]);
 
-function updatePost(string $title, string $description, int $id) : bool
-{
-    global $connection;
-    $statement = $connection->prepare("update posts set title = :title, description = :description where id = :id");
-    $statement->execute([
-        ':title' => $title,
-        ':description' => $description,
-        ':id' => $id
+//     return $statement->rowCount() > 0;
+// }
 
-    ]);
+// function getPost(int $id) : array
+// {
+//     global $connection;
+//     $statement = $connection->prepare("select * from posts where id = :id");
+//     $statement->execute([':id' => $id]);
+//     return $statement->fetch();
+// }
 
-    return $statement->rowCount() > 0;
-}
+// function getPosts() : array
+// {
+//     global $connection;
+//     $statement = $connection->prepare("select * from posts");
+//     $statement->execute();
+//     return $statement->fetchAll();
+// }
 
-function deletePost(int $id) : bool
-{
-    global $connection;
-    $statement = $connection->prepare("delete from posts where id = :id");
-    $statement->execute([':id' => $id]);
-    return $statement->rowCount() > 0;
-}
+// function updatePost(string $title, string $description, int $id) : bool
+// {
+//     global $connection;
+//     $statement = $connection->prepare("update posts set title = :title, description = :description where id = :id");
+//     $statement->execute([
+//         ':title' => $title,
+//         ':description' => $description,
+//         ':id' => $id
+
+//     ]);
+
+//     return $statement->rowCount() > 0;
+// }
+
+// function deletePost(int $id) : bool
+// {
+//     global $connection;
+//     $statement = $connection->prepare("delete from posts where id = :id");
+//     $statement->execute([':id' => $id]);
+//     return $statement->rowCount() > 0;
+// }
