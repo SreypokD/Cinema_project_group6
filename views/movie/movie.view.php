@@ -53,4 +53,12 @@
 ?>
 </div>
 
+
+
+
+
+
+
+
 <?php require "views/partials/footer.php" ?>
+
