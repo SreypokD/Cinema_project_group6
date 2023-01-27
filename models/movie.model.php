@@ -1,6 +1,5 @@
-<?php
 
-function createPost(string $title, string $description) : bool
+<!-- function createPost(string $title, string $description) : bool
 {
     global $connection;
     $statement = $connection->prepare("INSERT INTO posts (title, description) values (:title, :description)");
@@ -49,4 +48,25 @@ function deletePost(int $id) : bool
     $statement = $connection->prepare("delete from posts where id = :id");
     $statement->execute([':id' => $id]);
     return $statement->rowCount() > 0;
+} -->
+
+<?php
+
+require "database/database.php";
+
+function getMovie() : array
+{
+    global $connection;
+    $statement = $connection->query("SELECT picture, title FROM movies");
+    $movieItems = $statement->fetchAll();
+    return $movieItems;
+}
+
+
+function getMovieItem(int $id) : array
+{
+    global $connection;
+    $statement = $connection->prepare("SELECT * FROM movies WHERE movie_id = :id");
+    $statement->execute([':id' => $id]);
+    return $statement->fetch();
 }
