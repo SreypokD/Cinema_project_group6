@@ -1,9 +1,9 @@
 <?php
 
-$heading = "Movie Page";
+// $heading = "Movie Page";
 
-require 'models/movie.model.php';
+// require 'models/movie.model.php';
 
-$posts = getPosts();
+// $posts = getPosts();
 
 require "views/movie/movie.view.php";
