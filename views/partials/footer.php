@@ -35,10 +35,22 @@
                 <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase ">Contact</h2>
                 <ul class="text-white dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">+885 962646651</a>
+                        <a href="#" class="hover:underline">FB : Dyna Hen</a>
                     </li>
                     <li>
                         <a href="#" class="hover:underline">FB : Chea Phearom</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#" class="hover:underline">FB : Cheiipok</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#" class="hover:underline">FB : Soknoeurn Srun</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#" class="hover:underline">FB : Daliya Thorn</a>
                     </li>
                 </ul>
             </div>
