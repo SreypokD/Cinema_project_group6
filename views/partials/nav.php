@@ -22,22 +22,24 @@
 			</a>
 			<!-- Sign In / Register      -->
 			<a class="flex items-center <?= urlIs('/login') ? ' bg-gray-800' : ' bg-white' ?> rounded-xl p-2 hover:bg-black " href="/login">
-				<h3 class="text-red-600 font-bold"><?php echo empty($_SESSION['email'])? 'LOGIN' : 'LOGOUT'?></h3>
+				<h3 class="text-red-600 font-bold"><?php echo isset($_SESSION['email'])? 'LOGOUT' : 'LOGIN'?></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 				</svg>
 			</a>
-			<a class="flex items-center <?= urlIs('/register') ? ' bg-gray-800' : ' bg-white' ?> bg-white p-2 rounded-xl hover:bg-black" href="/register">
+			<?php if(empty($_SESSION['email'])){ ?>
+			<a class="flex items-center <?= urlIs('/register') ? ' bg-gray-800' : 'bg-white' ?> p-2 rounded-xl hover:bg-black" href="/register">
 				<h3 class="text-red-600 font-bold">REGISTER</h3>
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none"
+				<svg xmlns="http://www.w3.org/2000/svg" class=" h-6 w-6 text-red-600" fill="none"
 					viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 					d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
 				</svg>
 			</a>
-
+				<?php } ?>
+			
 		</div>
 	</div>
 	<div class="bg-black">
@@ -84,16 +86,16 @@
 						class="<?= urlIs('/booking') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>">BOOKING</span>
 			</div>
 			</a>
+			<?php if (!(urlIs('/login') || urlIs('/register'))){ ?>
 			<div class="lg:flex items-center space-x-2 bg-white py-2 px-10 rounded-full">
-				<span class='<?= urlIs('/login') || urlIs('/register') ? 'hidden' : '' ?>'>
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600 font-bold cursor-pointer" fill="none"
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600 font-bold cursor-pointer" fill="none"
 						viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-					</svg>
-				</span>
+				</svg>
 				<input class="outline-none text-red-500 placeholder:text-black" type="search" placeholder="Search..." />
 			</div>
+			<?php } ?>
 		</div>
 	</div>
 </nav>
