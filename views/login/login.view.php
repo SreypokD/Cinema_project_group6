@@ -2,7 +2,7 @@
 <?php require "views/partials/nav.php" ?>
 <form action="/login" class="mx-5 my-10 bg-black rounded-xl px-4 py-5 mx-80" method="POST">
 
-  <div class="bg-gray-300 rounded-sm text-center border-t-2 border-b-2 border-red-600 text-red-900 px-4 py-2 shadow-md mb-10"
+  <div class="bg-white rounded-sm text-center border-t-2 border-b-2 border-red-600 text-red-900 px-4 py-2 shadow-md mb-10"
     role="alert">
     <div class="inline-flex items-center">
       <img src="https://icon-library.com/images/sign-up-icon-png/sign-up-icon-png-21.jpg" class="h-6 w-6">

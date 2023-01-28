@@ -19,16 +19,16 @@ require 'models/login.model.php';
             $users = getUser();
             foreach($users as $user){
                 $is_password = password_verify($password, $user['password']);
-                if ($email == $user["email"] && $password == $user["password"] ){
+                if ($email == $user["email"] && $password == $user["password"] && $is_password){
                     $_SESSION['email'] = $user["email"];
                     $_SESSION['password'] = $user["password"];
                     header('Location:/');
                     break;
                 }
-                if(!($email == $user['email'])){
+                else if(!($email == $user['email'])){
                     $errors['email'] = 'Your email is not correct';
                 }
-                if(!($password == $user['password'])){
+                else if(!($password == $user['password'])){
                     $errors['password'] = 'Your password is not correct';
                 }
             }
