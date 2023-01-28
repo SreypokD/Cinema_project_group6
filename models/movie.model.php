@@ -2,10 +2,10 @@
 //database
 require "database/database.php";
 
-function createPost(string $title, string $description) : bool
+function getMovie() : array
 {
     global $connection;
-    $statement = $connection->query("SELECT * FROM movies WHERE movie_id ORDER BY movie_id DESC");
+    $statement = $connection->query("SELECT picture, title FROM movies");
     $movieItems = $statement->fetchAll();
     return $movieItems;
 }
