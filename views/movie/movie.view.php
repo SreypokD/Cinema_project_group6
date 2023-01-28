@@ -16,9 +16,6 @@
     $movies = getMovie();
     foreach($movies as $movie) {
 ?>
-
-        
-
                 <div class="bg-red-500 p-3 flex flex-col justify-center mt-10" id="card">  
                     <div class=" max-w-sm flex justify-center items-center content-div rounded-md">
                 

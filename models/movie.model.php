@@ -30,7 +30,13 @@ function getPosts() : array
     $statement->execute();
     return $statement->fetchAll();
 }
-
+function getMovie() : array
+{
+    global $connection;
+    $statement = $connection->query("SELECT picture, title FROM movies");
+    $movieItems = $statement->fetchAll();
+    return $movieItems;
+}
 // function updatePost(string $title, string $description, int $id) : bool
 // {
 //     global $connection;
