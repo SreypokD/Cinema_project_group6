@@ -31,7 +31,7 @@
                     <div class="absolute opacity-0 fd-sh group-hover:opacity-100 group-hover:buttom-0">
                         <span class="text-2xl text-white tracking-wider leading-relaxed font-sans">Movie time</span> 
                     <div class="pt-8 text-center flex flex-col items-center ">
-                    <button class="text-white p-2 bg-red-600  text-white font-bold text-sm w-30 rounded-md"><a href="/detail">SEE MORE</a></button>
+                    <button class="text-white p-2 bg-red-600  text-white font-bold text-sm w-30 rounded-md"><a href="/detail?id=<?php echo $movie['movie_id'] ?>">SEE MORE</a></button>
                     <button class="text-white p-2 bg-red-600  text-white font-bold text-sm w-30 mt-5 rounded-md"><a href="https://majorcineplex.com.kh/home">BUY NOW</a></button>
                 </div>
                 </div>
