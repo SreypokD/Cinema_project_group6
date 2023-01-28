@@ -78,7 +78,7 @@ CREATE TABLE `movies` (
   `language` varchar(20) DEFAULT NULL,
   `releast_date` date DEFAULT NULL,
   `duration` time NOT NULL,
-  `picture` longblob NOT NULL
+  `picture` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -86,9 +86,10 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`movie_id`, `title`, `description`, `language`, `releast_date`, `duration`, `picture`) VALUES
-(1, 'AVATAR: The Way Of Water', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', ''),
-(2, 'AVATAR: The Way Of Water', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', 0x68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f466b4b4f526f795563414572506c422e6a70673a6c61726765),
-(3, 'Perfect World', 'Watch full episodes Perfect World [Wanmei Shijie], download Perfect World [Wanmei Shijie] english subbed, Perfect World [Wanmei Shijie] eng sub, download Perfect World [Wanmei Shijie] eng sub, stream ', 'English', '2021-04-23', '03:45:16', 0x68747470733a2f2f69322e77702e636f6d2f6c756369666572646f6e676875612e696e2f77702d636f6e74656e742f75706c6f6164732f323032312f31312f706572666563742d776f726c642d77616e6d65692d7368696a69652d4c5543494645522d444f4e474855412e6a706567);
+(1, 'Avata:The way water', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', 'https://images.theconversation.com/files/500899/original/file-20221214-461-22jr1l.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop'),
+(2, 'Best disney: Boss baby', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', 'https://ntvb.tmsimg.com/assets/p13107896_v_h8_ad.jpg?w=1280&h=720'),
+(3, 'Best disney: Jurney slot', 'Watch full episodes Perfect World [Wanmei Shijie], download Perfect World [Wanmei Shijie] english subbed, Perfect World [Wanmei Shijie] eng sub, download Perfect World [Wanmei Shijie] eng sub, stream ', 'English', '2021-04-23', '03:45:16', 'http://www.cheatsheet.com/wp-content/uploads/2016/03/zootopia.jpeg'),
+(4, 'Best disney: UP Ellie Carl', 'Watch full episodes Perfect World [Wanmei Shijie], download Perfect World [Wanmei Shijie] english subbed, Perfect World [Wanmei Shijie] eng sub, download Perfect World [Wanmei Shijie] eng sub, stream ', 'English', '2021-04-23', '03:45:16', 'https://www.storypick.com/wp-content/uploads/2015/08/up11.jpg');
 
 -- --------------------------------------------------------
 
