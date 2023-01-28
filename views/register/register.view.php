@@ -5,7 +5,7 @@
 
   <form action="/register" class="mx-5 my-10 bg-black rounded-xl px-4 py-5 mx-80" method="POST">
   
-  <div class="bg-gray-300 rounded-sm text-center border-t-2 border-b-2 border-red-600 text-red-900 py-2 shadow-md mb-10"  role="alert">
+  <div class="bg-white rounded-sm text-center border-t-2 border-b-2 border-red-600 text-red-900 py-2 shadow-md mb-10"  role="alert">
     <div class="inline-flex items-center">
       <img src="https://icon-library.com/images/sign-up-icon-png/sign-up-icon-png-21.jpg" class = "h-6 w-6">
       <h1 class="font-bold px-3 text-black text-2xl "> SIGN UP ACCOUNT</h1>

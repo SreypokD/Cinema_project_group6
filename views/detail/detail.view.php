@@ -16,10 +16,10 @@ require "models/movie.model.php";
 global $connection;
 $id = '';
 $item = '';
+$listShow = listShow();
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
   $item = getMovieItem($id);
-  print_r('movied id '.$id);
 }
 ?>
 <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4 ">
