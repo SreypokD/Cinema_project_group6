@@ -4,8 +4,8 @@ $heading = "Movie Page";
 
 require 'models/movie.model.php';
 
+require "views/movie/movie.view.php";
 $posts = getMovie();
 
-require "views/movie/movie.view.php";
 
 

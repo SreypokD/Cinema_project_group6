@@ -33,7 +33,7 @@ function getPosts() : array
 function getMovie() : array
 {
     global $connection;
-    $statement = $connection->query("SELECT picture, title FROM movies");
+    $statement = $connection->query("SELECT * FROM movies");
     $movieItems = $statement->fetchAll();
     return $movieItems;
 }
