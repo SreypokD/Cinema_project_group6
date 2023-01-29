@@ -6,6 +6,7 @@ $routes = [
     '/movie' => 'controllers/movie/movie.controller.php',
     '/booking' => 'controllers/booking/booking.controller.php',
     '/register' => 'controllers/register/register.controller.php',
+    '/logout' => 'controllers/logout/logout.controller.php',
     '/validate' => 'controllers/register/register.validation.controller.php',
     '/login' => 'controllers/login/login.controller.php',
     '/detail' => 'controllers/detail/detail.controller.php',
