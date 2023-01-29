@@ -92,7 +92,7 @@ if (isset($_GET['id'])) {
           <span class="bg-red-600 px-4 py-1 text-white">Date Mean Chey</span>
         </div>
         <hr class="h-1 mb-1">
-        <p class="text-lg">Hall: Smart 4</p>
+        <p class="text-lg text-white">Hall: Smart 4</p>
         <div>
           <hr class="h-1 mt-1">
           <div class="flex space-x-4 mt-2 mb-2">
@@ -135,7 +135,7 @@ if (isset($_GET['id'])) {
           <span class="bg-red-600 px-4 py-1 text-white">Eden Mall</span>
         </div>
         <hr class="h-1 mb-1">
-        <p class="text-lg">Hall: Diamond Class 4</p>
+        <p class="text-lg text-white">Hall: Diamond Class 4</p>
         <div>
           <hr class="h-1 mt-1">
           <div class="flex space-x-4 mt-2 mb-2">
@@ -178,7 +178,7 @@ if (isset($_GET['id'])) {
           <span class="bg-red-600 px-4 py-1 text-white">Date City Mall</span>
         </div>
         <hr class="h-1 mb-1">
-        <p class="text-lg">Hall: Gold Class</p>
+        <p class="text-lg text-white">Hall: Gold Class</p>
         <div>
           <hr class="h-1 mt-1">
           <div class="flex space-x-4 mt-2 mb-2">
