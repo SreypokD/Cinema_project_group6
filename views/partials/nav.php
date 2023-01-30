@@ -21,7 +21,7 @@
 				</span>
 			</a>
 			<!-- Sign In / Register      -->
-			<a class="flex items-center <?= urlIs('/login') ? ' bg-gray-800' : ' bg-white' ?> rounded-xl p-2 hover:bg-black " href="/login">
+			<a class="flex items-center <?= urlIs('/login') ? ' bg-gray-800' : ' bg-white' ?> rounded-xl p-2 hover:bg-black " href="<?php echo isset($_SESSION['email'])? '/logout' : '/login'?>">
 				<h3 class="text-red-600 font-bold"><?php echo isset($_SESSION['email'])? 'LOGOUT' : 'LOGIN'?></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
