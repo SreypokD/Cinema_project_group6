@@ -70,3 +70,22 @@ function getMovieItem(int $id) : array
     $statement->execute([':id' => $id]);
     return $statement->fetch();
 }
+
+// function searchMovie() : bool
+// {   
+//     global $connection;
+//     if (isset($_GET['search'])) 
+//     {
+//         $filterValues = $_GET['search'];
+//         $query = "SELECT * FROM movies WHERE CONCAT(title, language, format) LIKE '%$filterValues%' ";
+//         $queryRun = query($connection,$query);
+
+//         if ($queryRun > 0)
+//         {
+
+//         }
+//         else {
+//             echo "Result Not Found"
+//         }
+//     }
+// }
