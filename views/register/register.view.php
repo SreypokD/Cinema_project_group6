@@ -3,12 +3,11 @@
 
 
 
-  <form action="/register" class="mx-5 my-10 bg-black rounded-xl px-4 py-5 mx-80" method="POST">
+  <form action="/register" class="mx-5 my-10 bg-black rounded-xl px-4 pt-4 pb-4 mx-80" method="POST">
   
-  <div class="bg-white rounded-sm text-center border-t-2 border-b-2 border-red-600 text-red-900 py-2 shadow-md mb-10"  role="alert">
-    <div class="inline-flex items-center">
-      <img src="https://icon-library.com/images/sign-up-icon-png/sign-up-icon-png-21.jpg" class = "h-6 w-6">
-      <h1 class="font-bold px-3 text-black text-2xl "> SIGN UP ACCOUNT</h1>
+  <div class="rounded-xl text-center border-t-4 border-red-600  py-2 shadow-md mb-10"  role="alert">
+    <div class="inline-flex items-center mt-2">
+      <h1 class="font-bold px-3 text-white text-2xl "> SIGN UP YOUR ACCOUNT</h1>
     </div>
   </div>
 
@@ -76,7 +75,7 @@
 
   <div class="grid text-center md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
-      <button class="bg-red-600 hover:bg-red-800 text-white py-2 px-40 rounded inline-flex items-center" >
+      <button class="bg-red-600 hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center" >
          Sign Up
       </button>
     </div>
