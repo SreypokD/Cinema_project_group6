@@ -14,19 +14,4 @@ function createUser(string $firstName, string $lastName, string $email, string $
 }
 
 
-// get email from database
-
-// function getEmail(string $email): bool
-// {
-//     global $connection;
-//     $statment = $connection -> prepare("SELECT email FROM users WHERE email=:email");
-//     $statment -> execute([
-//         ':email' => $email,        
-//     ]);
-//     return $statment->rowCount() == 1;
-// }
-
-
-
-
 

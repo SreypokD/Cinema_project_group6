@@ -2,6 +2,7 @@
 // require 'models/login.model.php';
 // session_start();
 ?>
+<script src='views/js/search.js'></script>
 <nav class=" text-white w-full">
 	<div class="bg-red-600 px-5 xl:px-12 py-6 flex w-full items-center justify-between">
 		<a class="text-3xl font-bold font-heading" href="#">
@@ -87,15 +88,20 @@
 			</div>
 			</a>
 			<?php if (!(urlIs('/login') || urlIs('/register'))){ ?>
+			<div class="group_search flex">
 			<div class="lg:flex items-center space-x-2 bg-white py-2 px-10 rounded-full">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600 font-bold cursor-pointer" fill="none"
 						viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 				</svg>
-				<input class="outline-none text-red-500 placeholder:text-black" type="search" placeholder="Search..." />
+				<input class="outline-none text-red-500 placeholder:text-black" type="search" name="search" id="search" placeholder="Search..." />
 			</div>
-			<?php } ?>
 		</div>
+		<div class="list absolute z-50 top-[21.5%] left-[79%] " id="show_list">
+	
+		</div>
+		<?php } ?>
+	</div>
 	</div>
 </nav>
