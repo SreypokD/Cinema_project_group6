@@ -35,22 +35,22 @@
                 <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase ">Contact</h2>
                 <ul class="text-white dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">FB : Dyna Hen</a>
+                        <a href="https://t.me/poNNy0" class="hover:underline">TG : Dyna Hen</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline">FB : Chea Phearom</a>
-                    </li>
-                    <br>
-                    <li>
-                        <a href="#" class="hover:underline">FB : Cheiipok</a>
+                        <a href="https://t.me/CH_Phearom" class="hover:underline">TG : Chea Phearom</a>
                     </li>
                     <br>
                     <li>
-                        <a href="#" class="hover:underline">FB : Soknoeurn Srun</a>
+                        <a href="https://t.me/Cheii_pok" class="hover:underline">TG : Cheiipok</a>
                     </li>
                     <br>
                     <li>
-                        <a href="#" class="hover:underline">FB : Daliya Thorn</a>
+                        <a href="https://t.me/SOKNOEURN_SRUN" class="hover:underline">TG : Soknoeurn Srun</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="https://t.me/dariyathorn" class="hover:underline">TG : Daliya Thorn</a>
                     </li>
                 </ul>
             </div>

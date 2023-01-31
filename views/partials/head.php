@@ -10,5 +10,5 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     
 </head>
-<body class="bg-gray-200 min-h-screen">
+<body class="bg-gray-800 min-h-screen">
 </body>

@@ -17,8 +17,3 @@
             }
         })
     });
-
-    $(document).on('click', 'a', function(){
-        $("#search").val($(this).text());
-        $("#show_list").html('');
-    })

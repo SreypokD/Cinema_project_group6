@@ -16,7 +16,7 @@
   </div>
   <div id="slider-1" class="container mx-auto h-full">
     <div class="bg-cover bg-top  h-full text-white py-24 px-10 object-fill"
-      style="background-image: url(https://assets-prd.ignimgs.com/2020/01/07/avatar-concept-art-1-1578399045465.jpg">
+      style="background-image: url(https://cineparatodos.gov.co/671/articles-80101_img_noticia.png">
 
       <p class="font-bold text-sm uppercase">Services</p>
       <p class="text-3xl font-bold">Wellcome to our website</p>

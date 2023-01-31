@@ -24,13 +24,13 @@
                     </span>
                 </div>
             </div>
-            <div class="absolute opacity-0 fd-sh group-hover:opacity-100 group-hover:buttom-0">
+            <div class="absolute opacity-0 fd-sh group-hover:opacity-90 group-hover:buttom-0">
                 <div class="pt-8 text-center flex flex-col items-center ">
                     <button id="button-card"
-                        class="text-white p-2 bg-red-700  text-white text-sm w-30 rounded-md hover:bg-black transition-all"><a
+                        class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 rounded-md hover:bg-red-600 transition-all"><a
                             href="/detail?id=<?php echo $movie['movie_id'] ?>">See More</a></button>
                     <button id="button-card"
-                        class="text-white p-2 bg-red-700  text-white text-sm w-30 mt-5 rounded-md hover:bg-black transition-all"><a
+                        class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all"><a
                             href="https://majorcineplex.com.kh/home">Buy Now</a></button>
                 </div>
             </div>
