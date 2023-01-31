@@ -4,10 +4,11 @@
 ?>
 <script src='views/js/search.js'></script>
 <nav class=" text-white w-full">
-	<div class="bg-red-600 px-5 xl:px-12 py-6 flex w-full items-center justify-between">
-		<a class="text-3xl font-bold font-heading" href="#">
+	<div class="bg-red-600 px-5 py-2 xl:px-12 flex w-full items-center justify-between">
+		<img src="asset/image/logo_black.png" alt="" class = "h-20 w-40" >
+		<!-- <a class="text-3xl font-bold font-heading" href="#">
 			DATE MOVIE.
-		</a>
+		</a> -->
 		<div class="hidden xl:flex items-center space-x-5">
 			<a class="flex items-center hover:text-gray-200" href="#">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"

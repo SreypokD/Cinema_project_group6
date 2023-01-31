@@ -5,11 +5,6 @@
 <?php require "database/database.php" ?>
 
 
-<!-- <main class="h-screen">
-  <div class="p-3">
-    <p>Hello movie page</p>
-  </div>
-</main> -->
 <div class="mb-10 grid grid-cols-4 ml-5">
 <?php 
     global $connection;
@@ -50,13 +45,6 @@
     }
 ?>
 </div>
-
-
-
-
-
-
-
 
 <?php require "views/partials/footer.php" ?>
 
