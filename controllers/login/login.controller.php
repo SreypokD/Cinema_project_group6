@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'database/database.php';
-require 'models/login.model.php';
+require 'models/users.model.php';
 
     // variable get post
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
