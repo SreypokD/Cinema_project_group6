@@ -37,24 +37,3 @@ function getMovie() : array
     $movieItems = $statement->fetchAll();
     return $movieItems;
 }
-// function updatePost(string $title, string $description, int $id) : bool
-// {
-//     global $connection;
-//     $statement = $connection->prepare("update posts set title = :title, description = :description where id = :id");
-//     $statement->execute([
-//         ':title' => $title,
-//         ':description' => $description,
-//         ':id' => $id
-
-//     ]);
-
-//     return $statement->rowCount() > 0;
-// }
-
-// function deletePost(int $id) : bool
-// {
-//     global $connection;
-//     $statement = $connection->prepare("delete from posts where id = :id");
-//     $statement->execute([':id' => $id]);
-//     return $statement->rowCount() > 0;
-// }
