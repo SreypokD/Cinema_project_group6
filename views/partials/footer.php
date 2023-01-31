@@ -1,7 +1,7 @@
 <footer class="p-4 bg-black sm:p-6 dark:bg-black mt-10">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <span class="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">DATE MOVIE.</span>
             </a>
         </div>
@@ -16,7 +16,7 @@
                         <a href="/movie" class="hover:underline ">Movie</a>
                     </li>
                     <li>
-                        <a href="/ticket" class="hover:underline">Ticket</a>
+                        <a href="/ticket" class="hover:underline">Booking</a>
                     </li>
                 </ul>
             </div>

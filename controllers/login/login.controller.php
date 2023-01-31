@@ -14,6 +14,9 @@ require 'models/users.model.php';
         if(empty($email)) {
             $errors['email'] = 'Please enter a email';
         }
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){  
+            $errors['email'] = "Invalid email format";  
+        }
         if (empty($errors)){
             $users = getUser();
             foreach($users as $user){
@@ -23,9 +26,6 @@ require 'models/users.model.php';
                     $_SESSION['password'] = $user["password"];
                     header('Location:/');
                     break;
-                }
-                else if(!($email == $user['email'])){
-                    $errors['email'] = 'Your email is not correct';
                 }
                 else if(!($is_password)){
                     $errors['password'] = 'Your password is not correct';
