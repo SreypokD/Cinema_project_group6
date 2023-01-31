@@ -4,7 +4,7 @@
 ?>
 <script src='views/js/search.js'></script>
 <nav class=" text-white w-full">
-	<div class="bg-red-600 px-5 py-2 xl:px-12 flex w-full items-center justify-between">
+	<div class="bg-red-600 px-5 xl:px-12 flex w-full items-center justify-between">
 		<img src="asset/image/logo_black.png" alt="" class = "h-20 w-40" >
 		<!-- <a class="text-3xl font-bold font-heading" href="#">
 			DATE MOVIE.
