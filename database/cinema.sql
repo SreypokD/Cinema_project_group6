@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2023 at 06:44 PM
+-- Generation Time: Jan 31, 2023 at 08:27 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -62,7 +62,7 @@ CREATE TABLE `halls` (
 
 INSERT INTO `halls` (`hall_id`, `hall_name`, `total_seat`) VALUES
 (1, 'Smart 4', 50),
-(2, 'Diamong Class', 100),
+(2, 'Diamond Class', 100),
 (3, 'Golden Class', 120);
 
 -- --------------------------------------------------------
@@ -86,23 +86,24 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`movie_id`, `title`, `description`, `language`, `releast_date`, `duration`, `picture`) VALUES
-(1, 'Avata:The way water', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', 'https://images.theconversation.com/files/500899/original/file-20221214-461-22jr1l.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop'),
-(2, 'Best disney: Boss baby', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', 'https://ntvb.tmsimg.com/assets/p13107896_v_h8_ad.jpg?w=1280&h=720'),
-(3, 'Best disney: Jurney slot', 'Watch full episodes Perfect World [Wanmei Shijie], download Perfect World [Wanmei Shijie] english subbed, Perfect World [Wanmei Shijie] eng sub, download Perfect World [Wanmei Shijie] eng sub, stream ', 'English', '2021-04-23', '03:45:16', 'http://www.cheatsheet.com/wp-content/uploads/2016/03/zootopia.jpeg'),
-(4, 'Best disney: UP Ellie Carl', 'Watch full episodes Perfect World [Wanmei Shijie], download Perfect World [Wanmei Shijie] english subbed, Perfect World [Wanmei Shijie] eng sub, download Perfect World [Wanmei Shijie] eng sub, stream ', 'English', '2021-04-23', '03:45:16', 'https://www.storypick.com/wp-content/uploads/2015/08/up11.jpg'),
+(1, 'Avata:The way water', 'Quantumania (2D) Ch Sub English TBC/ 200 Minutes', 'English', '2023-01-16', '03:10:05', 'https://pbs.twimg.com/media/FkKORoyUcAErPlB.jpg:large'),
+(2, 'Coco', 'In Disney•Pixar’s vibrant tale of family, fun and adventure, an aspiring young musician named Miguel (voice of newcomer Anthony Gonzalez) embarks on an extraordinary journey to the magical land of his', 'English', '2023-01-16', '03:10:05', 'https://lumiere-a.akamaihd.net/v1/images/p_coco_19736_fd5fa537.jpeg'),
+(3, 'Guardians of the Galaxy Vol. 2', 'An unprecedented cinematic journey ten years in the making and\r\nspanning the entire Marvel Cinematic Universe, MARVEL STUDIOS\'\r\nTHE AVENGERS: INFINITY WAR brings to the screen the ultimate', 'English', '2021-04-23', '03:45:16', 'https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_.jpg'),
+(4, ' Avengers: Infinity War', 'An unprecedented cinematic journey ten years in the making and\r\nspanning the entire Marvel Cinematic Universe, MARVEL STUDIOS\'\r\n', 'English', '2021-04-23', '03:45:16', 'https://m.media-amazon.com/images/I/81GfZasnt9L.jpg'),
 (5, 'The Death On the Nile', 'Kenneth Branagh stars as Hercule Poirot, who must investigate the murder of a young heiress while on vacation on the Nile', 'English', '2023-01-10', '03:45:10', 'https://miro.medium.com/max/1058/1*v2mct3LYveKUO_WrbTTC5w.jpeg'),
 (6, 'Who Am I?', 'Pastor Joe leads a church in an active city where he reaches out to the poor and destitute in any way he can', 'English', '2022-12-16', '02:50:10', 'https://m.media-amazon.com/images/M/MV5BOWJlMjRhMzAtMTViZi00MTM5LWE0YmQtMDBjYTg2OTViZjUwXkEyXkFqcGdeQXVyMjY2NDc0OTQ@._V1_FMjpg_UX1000_.jpg'),
 (7, 'Alita', '\r\nCast & crew\r\nUser reviews\r\nTrivia\r\nIMDbPro\r\n\r\nAlita: Battle Angel\r\n2019\r\nPG-13\r\n2h 2m\r\nIMDb RATING\r\nYOUR RATING\r\nPOPULARITY\r\nJennifer Connelly, Christoph Waltz, Mahershala Ali, Eiza González, Rosa S', 'English', '2019-01-10', '02:55:10', 'https://m.media-amazon.com/images/M/MV5BMTQzYWYwYjctY2JhZS00NTYzLTllM2UtZWY5ZTk0NmYwYzIyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg'),
 (8, 'I Am Groot', 'Marvel Studios’ “I Am Groot” is a collection of five original shorts starring Baby Groot, everyone’s favorite little tree, and features several new and unusual characters.', 'English', '2022-08-10', '02:50:10', 'https://lumiere-a.akamaihd.net/v1/images/p_disneyplusoriginals_iamgroot_firststeps_v2_636_b3b5c216.jpeg?region=0,0,540,810'),
-(9, 'Bottle Through The Heaven', '(TV Series 2017)', 'Chinese', '2022-12-10', '03:45:10', 'https://m.media-amazon.com/images/M/MV5BZTRlMDNlNWItYTU3ZC00NjMyLWIyMjMtM2FiZDk0MjI1MmVhXkEyXkFqcGdeQXVyNTY4MjkyOTk@._V1_.jpg'),
-(10, 'Thor Love And Thunder', 'Marvel Studios\'|Thor:Love and Thunder|Date\r\nMovies', 'English', '2022-12-16', '04:20:10', 'https://lumiere-a.akamaihd.net/v1/images/p_thorloveandthunder_639_593cb642.jpeg'),
-(11, 'Elementaire', 'Dans la ville d’Element City, le feu, l’eau, la terre et l’air vivent dans la plus parfaite harmonie. C’est ici que résident Flam, une jeune femme intrépide et vive d’esprit, au caractère bien trempé,', 'English', '2022-12-10', '03:45:10', 'https://lumiere-a.akamaihd.net/v1/images/image_968ab1e0.jpeg?region=0,0,540,810'),
-(12, 'Avalonia', 'Avalonia, The Strange Journey, the action-packed comedy-adventure from Walt Disney Animation Studios, takes us on a journey through three generations of the legendary Clade family as they try to unite', 'English', '2022-12-16', '02:20:10', 'https://lumiere-a.akamaihd.net/v1/images/image_539d613c.jpeg?region=0%2C0%2C540%2C810'),
-(13, 'Ant-Man and the Wasp: Quantumania', 'Superhero duo Scott Lang (Paul Rudd) and Hope Van Dyne (Evangeline Lilly) return for new adventures of Ant-Man and the Wasp.', 'English', '2023-02-15', '00:00:00', 'https://lumiere-a.akamaihd.net/v1/images/image_b1c09a80.jpeg?region=0%2C0%2C540%2C810'),
-(14, 'Captain Marvel', 'Captain Marvel, from Marvel Studios, is an adventure set in the 1990s, at an unprecedented time in the history of the Marvel Cinematic Universe, during which Carol Danvers becomes one of the most powe', 'English', '2019-03-15', '03:50:35', 'https://lumiere-a.akamaihd.net/v1/images/p_captainmarvel_19755_3a1675ee.jpeg?region=0%2C0%2C540%2C810'),
-(15, 'The Indestructibles 2 ', 'In Incredibles 2, Hélène is asked to organize the return of the Supers while Bob leads a heroic daily life at home between Violette, Flèche, and the baby, Jack-Jack, whose powers are about to reveal t', 'English', '2018-07-04', '01:58:10', 'https://lumiere-a.akamaihd.net/v1/images/image_ac9e58c8.jpeg?region=0%2C0%2C540%2C810'),
-(16, 'Toy Story 4', 'Woody always knew what his role was and that his priority was the well-being of his child, whether it was Andy or Bonnie. And when Bonnie\'s beloved new homemade toy, called Fork, thinks she\'s trash, W', 'English', '2019-06-26', '01:40:10', 'https://lumiere-a.akamaihd.net/v1/images/image_bf8739ba.jpeg?region=0%2C0%2C540%2C810'),
-(17, 'Lu Ca', '644 / 5,000\r\nTranslation results\r\nTranslation result\r\nSet in a beautiful coastal town on the Italian Riviera, Disney and Pixar\'s feature film \"Luca\" tells the story of a young boy who experiences an u', 'English', '2020-06-26', '01:35:10', 'https://lumiere-a.akamaihd.net/v1/images/image_2ff75a5c.jpeg?region=0%2C0%2C540%2C810');
+(9, 'Thor Love And Thunder', 'Marvel Studios\'|Thor:Love and Thunder|Date\r\nMovies', 'English', '2022-12-16', '04:20:10', 'https://lumiere-a.akamaihd.net/v1/images/p_thorloveandthunder_639_593cb642.jpeg'),
+(10, 'Elementaire', 'Dans la ville d’Element City, le feu, l’eau, la terre et l’air vivent dans la plus parfaite harmonie. C’est ici que résident Flam, une jeune femme intrépide et vive d’esprit, au caractère bien trempé,', 'English', '2022-12-10', '03:45:10', 'https://lumiere-a.akamaihd.net/v1/images/image_968ab1e0.jpeg?region=0,0,540,810'),
+(11, 'Avalonia', 'Avalonia, The Strange Journey, the action-packed comedy-adventure from Walt Disney Animation Studios, takes us on a journey through three generations of the legendary Clade family as they try to unite', 'English', '2022-12-16', '02:20:10', 'https://lumiere-a.akamaihd.net/v1/images/image_539d613c.jpeg?region=0%2C0%2C540%2C810'),
+(12, 'Ant-Man and the Wasp: Quantumania', 'Superhero duo Scott Lang (Paul Rudd) and Hope Van Dyne (Evangeline Lilly) return for new adventures of Ant-Man and the Wasp.', 'English', '2023-02-15', '00:00:00', 'https://lumiere-a.akamaihd.net/v1/images/image_b1c09a80.jpeg?region=0%2C0%2C540%2C810'),
+(13, 'Captain Marvel', 'Captain Marvel, from Marvel Studios, is an adventure set in the 1990s, at an unprecedented time in the history of the Marvel Cinematic Universe, during which Carol Danvers becomes one of the most powe', 'English', '2019-03-15', '03:50:35', 'https://lumiere-a.akamaihd.net/v1/images/p_captainmarvel_19755_3a1675ee.jpeg?region=0%2C0%2C540%2C810'),
+(14, 'The Indestructibles 2 ', 'In Incredibles 2, Hélène is asked to organize the return of the Supers while Bob leads a heroic daily life at home between Violette, Flèche, and the baby, Jack-Jack, whose powers are about to reveal t', 'English', '2018-07-04', '01:58:10', 'https://lumiere-a.akamaihd.net/v1/images/image_ac9e58c8.jpeg?region=0%2C0%2C540%2C810'),
+(15, 'Toy Story 4', 'Woody always knew what his role was and that his priority was the well-being of his child, whether it was Andy or Bonnie. And when Bonnie\'s beloved new homemade toy, called Fork, thinks she\'s trash, W', 'English', '2019-06-26', '01:40:10', 'https://lumiere-a.akamaihd.net/v1/images/image_bf8739ba.jpeg?region=0%2C0%2C540%2C810'),
+(16, 'Lu Ca', '644 / 5,000\r\nTranslation results\r\nTranslation result\r\nSet in a beautiful coastal town on the Italian Riviera, Disney and Pixar\'s feature film \"Luca\" tells the story of a young boy who experiences an u', 'English', '2020-06-26', '01:35:10', 'https://lumiere-a.akamaihd.net/v1/images/image_2ff75a5c.jpeg?region=0%2C0%2C540%2C810'),
+(17, 'The Little Mermaid', '“The Little Mermaid,” visionary filmmaker Rob Marshall’s live-action reimagining of the studio’s Oscar®-winning animated musical classic, opens exclusively in cinemas May 2023. “The Little Mermaid” is', 'English', '2023-01-10', '02:55:10', 'https://lumiere-a.akamaihd.net/v1/images/thelittlemermaid2023-teaserposter_9263ee80.jpeg'),
+(18, 'Shang-Chi and The Legend of The Ten Ring', 'Marvel Studios\' \"Shang-Chi and The Legend of The Ten Rings\" stars Simu Liu as Shang-Chi, who must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings ', 'Chinese', '2022-11-30', '02:55:10', 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/shangchi_lob_crd_07.jpg');
 
 -- --------------------------------------------------------
 
@@ -209,7 +210,9 @@ INSERT INTO `shows` (`show_id`, `start_date`, `end_date`, `format`, `subtitle`, 
 (14, '2023-02-06 09:00:00', '0000-00-00 00:00:00', '2D', 'English', 14, 2),
 (15, '2023-02-07 09:00:00', '2023-03-01 10:00:00', '2D', 'English ', 15, 1),
 (16, '2023-02-06 09:00:00', '0000-00-00 00:00:00', '2D', 'English', 16, 3),
-(17, '2023-02-07 09:00:00', '2023-03-01 10:00:00', '2D', 'English ', 17, 2);
+(17, '2023-02-07 09:00:00', '2023-03-01 10:00:00', '2D', 'English ', 17, 2),
+(18, '2023-02-01 09:00:00', '2023-03-02 10:00:00', '2D', 'English', 18, 1),
+(19, '2023-02-01 09:00:00', '2023-03-02 10:00:00', '2D', 'English', 19, 2);
 
 -- --------------------------------------------------------
 
@@ -243,7 +246,7 @@ CREATE TABLE `users` (
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(50) DEFAULT NULL
+  `password` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -255,7 +258,9 @@ INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`) 
 (2, 'Phearom', 'Chea', 'phearom.chea@gmail.com', '1234'),
 (3, 'Dyna', 'Hen', 'dyna@gmail.com', '2222'),
 (4, 'Dariya', 'Thorn', 'dariya@gmail.com', '1122'),
-(5, 'Sok', 'Noeurn', 'noeurn@gmail.com', '1111');
+(5, 'Sok', 'Noeurn', 'noeurn@gmail.com', '1111'),
+(6, 'Soknoeurn', 'SRUN', 'example@gmail.com', '$2y$10$3MdHeVY3JmMcTCZTe9dG8uZ7LPWP37gLddmHl0ao4gX'),
+(7, 'Soknoeurn', 'SRUN', 'noeurn168@gmail.com', '$2y$10$lkwce2ZFm2K9k18gbIwEc.FpEF2c8s8nSvcbVSEnLRK');
 
 --
 -- Indexes for dumped tables
@@ -344,7 +349,7 @@ ALTER TABLE `halls`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `payments`
@@ -362,7 +367,7 @@ ALTER TABLE `sellers`
 -- AUTO_INCREMENT for table `shows`
 --
 ALTER TABLE `shows`
-  MODIFY `show_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `show_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tickets`
@@ -374,7 +379,7 @@ ALTER TABLE `tickets`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
