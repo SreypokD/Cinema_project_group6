@@ -97,7 +97,7 @@
 				</a>
 			</div>
 			
-			<?php if (!(urlIs('/login') || urlIs('/register'))){ ?>
+			<?php if (!(urlIs('/login') || urlIs('/register') || urlIs('/contact'))){ ?>
 			<div class="group_search flex">
 			<div class="lg:flex items-center space-x-2 bg-white py-2 px-10 rounded-full">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black font-bold cursor-pointer" fill="none"
