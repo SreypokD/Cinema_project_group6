@@ -1,7 +1,7 @@
 <footer class="p-4 bg-black sm:p-6 dark:bg-black mt-10">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <span class="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">DATE MOVIE.</span>
             </a>
         </div>
@@ -16,7 +16,7 @@
                         <a href="/movie" class="hover:underline ">Movie</a>
                     </li>
                     <li>
-                        <a href="/ticket" class="hover:underline">Ticket</a>
+                        <a href="/ticket" class="hover:underline">Booking</a>
                     </li>
                 </ul>
             </div>
@@ -35,22 +35,22 @@
                 <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase ">Contact</h2>
                 <ul class="text-white dark:text-gray-400">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">FB : Dyna Hen</a>
+                        <a href="https://t.me/poNNy0" class="hover:underline">TG : Dyna Hen</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline">FB : Chea Phearom</a>
-                    </li>
-                    <br>
-                    <li>
-                        <a href="#" class="hover:underline">FB : Cheiipok</a>
+                        <a href="https://t.me/CH_Phearom" class="hover:underline">TG : Chea Phearom</a>
                     </li>
                     <br>
                     <li>
-                        <a href="#" class="hover:underline">FB : Soknoeurn Srun</a>
+                        <a href="https://t.me/Cheii_pok" class="hover:underline">TG : Cheiipok</a>
                     </li>
                     <br>
                     <li>
-                        <a href="#" class="hover:underline">FB : Daliya Thorn</a>
+                        <a href="https://t.me/SOKNOEURN_SRUN" class="hover:underline">TG : Soknoeurn Srun</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="https://t.me/dariyathorn" class="hover:underline">TG : Daliya Thorn</a>
                     </li>
                 </ul>
             </div>

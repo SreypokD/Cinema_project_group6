@@ -5,7 +5,7 @@
   <div class=" rounded-xl text-center border-t-4 border-red-600 px-4 py-2 shadow-md mb-10"
     role="alert">
     <div class="inline-flex items-center mt-2">
-      <h1 class="font-bold px-3 text-white text-2xl"> SING IN YOUR ACCOUNT</h1>
+      <h1 class="font-bold px-3 text-white text-2xl"> SIGN IN YOUR ACCOUNT</h1>
     </div>
   </div>
 
@@ -54,7 +54,7 @@
   </div>
   <div class="text-center">
       <div class="relative z-0 w-full mb-6 group">
-        <button class="ront-bold bg-red-600 hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center">
+        <button class="ront-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center">
           SIGN IN
         </button>
       </div>

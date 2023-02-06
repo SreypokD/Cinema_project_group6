@@ -1,11 +1,7 @@
-<?php
-// require 'models/login.model.php';
-// session_start();
-?>
 <script src='views/js/search.js'></script>
 <nav class=" text-white w-full">
-	<div class="bg-red-600 px-5 xl:px-12 py-6 flex w-full items-center justify-between">
-		<a class="text-3xl font-bold font-heading" href="#">
+	<div class="bg-red-600 px-5 py-4 xl:px-12 flex w-full items-center justify-between">
+		<a class="text-3xl font-bold font-heading" href="/">
 			DATE MOVIE.
 		</a>
 		<div class="hidden xl:flex items-center space-x-5">

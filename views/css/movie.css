@@ -19,7 +19,7 @@
   }
   #card{
   height: 320px;
-  width: 290px;
+  width: 250px;
   border-radius: 6px;
   }
   #card:hover , #card:focus{

@@ -75,8 +75,8 @@
 
   <div class="grid text-center md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
-      <button class="bg-red-600 hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center" >
-         Sign Up
+      <button class="bg-gradient-to-r from-black via-red-600 to-black text-white font-bold hover:text-black text-white py-2 px-40 rounded inline-flex items-center" >
+         SIGN UP
       </button>
     </div>
   </div>
