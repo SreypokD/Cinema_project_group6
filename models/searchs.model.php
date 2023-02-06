@@ -1,6 +1,4 @@
-<?php 
-
-
+<?php
 function searchText($input){
     global $connection;
     $query = "select title,movie_id from movies where title like '%$input%' ";

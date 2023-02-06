@@ -13,7 +13,6 @@ require "models/users.model.php";
     // $verify_pass = $_POST['verify_pass'];
 
 
-
     // variable get post
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         // variable get post
@@ -31,7 +30,7 @@ require "models/users.model.php";
         if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {  
             $errors['first_name'] = "Only alphabets and white space are allowed";  
         };
-        // last name validatiion 
+        // last name validation 
         if(empty($last_name)) {
             $errors['last_name'] = 'Please enter a last name';
         };
