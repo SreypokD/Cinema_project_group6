@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require "views/partials/head.php" ?>
 <?php require "views/partials/nav.php" ?>
+<?php require "models/contact/contact.model.php" ?>
 
 <form action="/contact" class="mx-5 my-10 bg-black rounded-xl px-4 pt-4 pb-4 mx-80" method="POST">
   
@@ -9,7 +10,6 @@
       <h1 class="font-bold px-3 text-white text-2xl ">CONTACT US</h1>
     </div>
   </div>
-
 
   <div class="grid md:grid-cols-2 md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
@@ -44,18 +44,20 @@
   </div>
 
   <div class="relative z-0 w-full mb-2 group">
-    <textarea id="message" rows="4" class="block mb-4 p-2.5 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-white focus:outline-none focus:ring-0 focus:text-white focus:border-white peer" placeholder="Write your massage here..."></textarea>
+    <textarea id="message" name="message" rows="4" class="block mb-4 p-2.5 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-white focus:outline-none focus:ring-0 focus:text-white focus:border-white peer" placeholder="Write your massage here..."></textarea>
   </div>
 
   <div class="grid text-center md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
-      <button class="bg-gradient-to-r from-black via-red-600 to-black text-white font-bold hover:text-black text-white py-2 px-40 rounded inline-flex items-center" >
-         SAND MASSAGE
-      </button>
+      <input type="submit" value="SEND MESSAGE" class="bg-gradient-to-r from-black via-red-600 to-black text-white font-bold hover:text-black text-white py-2 px-40 rounded inline-flex items-center" name="send">
+      
+    </div>
+    <div class="bg-lime-600">
+      <?php echo $alert; ?>
     </div>
   </div>
   <p class="text-sm font-light text-gray-300">
-    You want to sell product you can contact with the product owner.
+    You want to sell product you can contact with product owner.
   </p>
   </form>
 
