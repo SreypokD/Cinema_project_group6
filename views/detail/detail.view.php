@@ -30,12 +30,12 @@ if (isset($_GET['id'])) {
       </div>
       <hr class="h-1 mb-8">
       <div class="flex mb-8">
-        <div class="grid w-full h-full grid-cols-4 sm:grid-cols-6">
+        <div class="grid w-full h-full grid-cols-3 sm:grid-cols-6">
           <div class="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg sm:col-span-4 lg:col-span-5">
             <img src="<?php echo $item['picture']; ?>" class="object-cover object-center">
           </div>
         </div>
-        <div class="w-3/4  h-full leading-10 flex flex-col text-xl">
+        <div class="w-3/3 h-full leading-10 flex flex-col text-xl">
           <div class="w-full text-white">
             <p class = "text-red-500 font-bold ">TITLE : <span class="text-white">
                 <?php echo $item['title'] ?>
