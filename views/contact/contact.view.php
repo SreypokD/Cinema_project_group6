@@ -44,12 +44,12 @@
   </div>
 
   <div class="relative z-0 w-full mb-2 group">
-    <textarea id="message" rows="4" class="block mb-4 p-2.5 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-white focus:outline-none focus:ring-0 focus:text-white focus:border-white peer" placeholder="Write your massage here..."></textarea>
+    <textarea id="message" rows="4" name="massage" class="block mb-4 p-2.5 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-white focus:outline-none focus:ring-0 focus:text-white focus:border-white peer" placeholder="Write your massage here..."></textarea>
   </div>
 
   <div class="grid text-center md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
-      <button class="bg-gradient-to-r from-black via-red-600 to-black text-white font-bold hover:text-black text-white py-2 px-40 rounded inline-flex items-center" >
+      <button name="submit" class="bg-gradient-to-r from-black via-red-600 to-black text-white font-bold hover:text-black text-white py-2 px-40 rounded inline-flex items-center" >
          SAND MASSAGE
       </button>
     </div>

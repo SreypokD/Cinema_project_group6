@@ -10,5 +10,6 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     
 </head>
-<body class="bg-gradient-to-r from-black via-red-600 to-black min-h-screen">
+<!-- <body class="bg-gradient-to-r from-black via-red-600 to-black min-h-screen"> -->
+<body class="bg-white">
 <!-- </body> -->
