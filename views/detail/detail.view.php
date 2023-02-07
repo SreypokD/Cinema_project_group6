@@ -37,45 +37,45 @@ if (isset($_GET['id'])) {
         </div>
         <div class="w-3/4  h-full leading-10 flex flex-col text-xl">
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">TITLE : <span class="text-white">
+            <p class = "text-red-500 font-bold ">TITLE : <span class="text-white">
                 <?php echo $item['title'] ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">LANGUAGE : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">LANGUAGE : <span class="text-white text-sm">
                 <?php echo $item['language'] ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">SUBTITLE : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">SUBTITLE : <span class="text-white text-sm">
                 <?php echo $item['subtitle']; ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">FORMAT : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">FORMAT : <span class="text-white text-sm">
                 <?php echo $item['format']; ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">CLASSIFICATION : <span class="text-white text-sm">NC15</span></p>
+            <p class = "text-red-500 font-bold ">CLASSIFICATION : <span class="text-white text-sm">NC15</span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">RUNNING TIME : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">RUNNING TIME : <span class="text-white text-sm">
                 <?php echo $item['duration'] ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">RELEAST DATE : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">RELEAST DATE : <span class="text-white text-sm  ">
               <?php echo $item['releast_date'] ?></span>
             </p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">START DATE : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">START DATE : <span class="text-white text-sm ">
               <?php echo $item['start_date'] ?></span>
             </p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold underline">END DATE : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold ">END DATE : <span class="text-white text-sm">
               <?php echo $item['end_date'] ?></span>
             </p>
           </div>
