@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require "views/partials/head.php" ?>
 <?php require "views/partials/nav.php" ?>
+<?php require "models/contact/contact.model.php" ?>
 
 <form action="/contact" class="mx-5 my-10 bg-black rounded-xl px-4 pt-4 pb-4 mx-80" method="POST">
   
@@ -9,7 +10,6 @@
       <h1 class="font-bold px-3 text-white text-2xl ">CONTACT US</h1>
     </div>
   </div>
-
 
   <div class="grid md:grid-cols-2 md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
@@ -55,7 +55,7 @@
     </div>
   </div>
   <p class="text-sm font-light text-gray-300">
-    You want to sell product you can contact with the product owner.
+    You want to sell product you can contact with product owner.
   </p>
   </form>
 
