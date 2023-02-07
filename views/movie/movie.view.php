@@ -11,7 +11,7 @@
     $movies = getMovie();
     foreach($movies as $movie) {
         
-?>
+    ?>
     <div class="bg-black p-3 flex flex-col justify-center mt-8" id="card">
         <div class=" flex justify-center items-center content-div rounded-md">
 
@@ -31,7 +31,7 @@
                         </button></a>
                     <a href="https://majorcineplex.com.kh/home"><button id="button-card"
                         class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">Buy Now
-                        </button></a>
+                    </button></a>
                 </div>
             </div>
         </div>
