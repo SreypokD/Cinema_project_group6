@@ -1,12 +1,11 @@
 <?php require "views/partials/head.php" ?>
 <?php require "views/partials/nav.php" ?>
-<form action="/login" class="mx-5 my-10 bg-black rounded-xl px-4 py-5 mx-80" method="POST">
+<form action="/login" class="mx-5 my-10 bg-black rounded-xl px-4 pt-4 pb-4 mx-80" method="POST">
 
-  <div class="bg-white rounded-sm text-center border-t-2 border-b-2 border-red-600 text-red-900 px-4 py-2 shadow-md mb-10"
+  <div class=" rounded-xl text-center border-t-4 border-red-600 px-4 py-2 shadow-md mb-10"
     role="alert">
-    <div class="inline-flex items-center">
-      <img src="https://icon-library.com/images/sign-up-icon-png/sign-up-icon-png-21.jpg" class="h-6 w-6">
-      <h1 class="font-bold px-3 text-black text-2xl "> SING IN YOUR ACCOUNT</h1>
+    <div class="inline-flex items-center mt-2">
+      <h1 class="font-bold px-3 text-white text-2xl"> SIGN IN YOUR ACCOUNT</h1>
     </div>
   </div>
 
@@ -50,20 +49,12 @@
   </div>
   <div class="flex items-center justify-between">
     <div class="flex items-start">
-      <div class="flex items-center h-5">
-        <input id="remember" aria-describedby="remember" type="checkbox"
-          class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-          >
-      </div>
-      <div class="ml-3 text-sm">
-        <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-      </div>
     </div>
-    <a href="#" class="text-sm font-medium text-red-600 hover:underline dark:text-primary-500">Forgot password?</a>
+    <a href="#" class="text-sm font-medium text-red-600 hover:underline dark:text-primary-500 mb-4">Forgot password?</a>
   </div>
   <div class="text-center">
       <div class="relative z-0 w-full mb-6 group">
-        <button class="ront-bold bg-red-600 hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center">
+        <button class="ront-bold bg-gradient-to-r from-black via-red-600 to-black hover:bg-red-900 text-white py-2 px-40 rounded inline-flex items-center">
           SIGN IN
         </button>
       </div>

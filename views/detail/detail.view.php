@@ -22,7 +22,7 @@ if (isset($_GET['id'])) {
   $item = getMovieItem($id);
 }
 ?>
-<div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4 ">
+<div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
   <div class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl ">
     <div class="relative w-full px-4 pt-14 pb-8 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-black">
       <div>
@@ -30,58 +30,58 @@ if (isset($_GET['id'])) {
       </div>
       <hr class="h-1 mb-8">
       <div class="flex mb-8">
-        <div class="grid w-full h-full grid-cols-4 sm:grid-cols-6">
-          <div class=" rounded-lg  sm:col-span-4 lg:col-span-5">
+        <div class="grid w-full h-full grid-cols-3 sm:grid-cols-6">
+          <div class="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg sm:col-span-4 lg:col-span-5">
             <img src="<?php echo $item['picture']; ?>" class="object-cover object-center">
           </div>
         </div>
-        <div class="w-3/4  h-full leading-10 flex flex-col text-xl">
+        <div class="w-3/3 h-full leading-10 flex flex-col text-xl">
           <div class="w-full text-white">
-            <p>Title <span> :
+            <p class = "text-red-500 font-bold ">TITLE : <span class="text-white">
                 <?php echo $item['title'] ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p>Language <span> :
+            <p class = "text-red-500 font-bold ">LANGUAGE : <span class="text-white text-sm">
                 <?php echo $item['language'] ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p>Subtitle <span> :
+            <p class = "text-red-500 font-bold ">SUBTITLE : <span class="text-white text-sm">
                 <?php echo $item['subtitle']; ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p>Format <span> :
+            <p class = "text-red-500 font-bold ">FORMAT : <span class="text-white text-sm">
                 <?php echo $item['format']; ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p>Classification <span> : NC15</span></p>
+            <p class = "text-red-500 font-bold ">CLASSIFICATION : <span class="text-white text-sm">NC15</span></p>
           </div>
           <div class="w-full text-white">
-            <p>Running Time <span> :
+            <p class = "text-red-500 font-bold ">RUNNING TIME : <span class="text-white text-sm">
                 <?php echo $item['duration'] ?>
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p>Releast-date:
-              <?php echo $item['releast_date'] ?>
+            <p class = "text-red-500 font-bold ">RELEAST DATE : <span class="text-white text-sm  ">
+              <?php echo $item['releast_date'] ?></span>
             </p>
           </div>
           <div class="w-full text-white">
-            <p>Start-date:
-              <?php echo $item['start_date'] ?>
+            <p class = "text-red-500 font-bold ">START DATE : <span class="text-white text-sm ">
+              <?php echo $item['start_date'] ?></span>
             </p>
           </div>
           <div class="w-full text-white">
-            <p>End-date:
-              <?php echo $item['end_date'] ?>
+            <p class = "text-red-500 font-bold ">END DATE : <span class="text-white text-sm">
+              <?php echo $item['end_date'] ?></span>
             </p>
           </div>
           <div class="w-full text-white">
-            <p>Descriptoin:
-              <?php echo $item['description'] ?>
+            <p class = "text-red-500 font-bold">DECRIPTION : <span class="text-white text-sm">
+              <?php echo $item['description'] ?></span>
             </p>
           </div>
         </div>
