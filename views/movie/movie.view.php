@@ -1,7 +1,9 @@
 <?php session_start(); ?>
 <?php require "views/partials/head.php" ?>
 <?php require "views/partials/nav.php" ?>
-<?php require "views/partials/banner.php" ?>
+<?php if(empty($_SESSION['user_type'])){
+  require "views/partials/banner.php";
+} ?>
 <?php require "database/database.php" ?>
 
 
@@ -11,7 +13,7 @@
     $movies = getMovie();
     foreach($movies as $movie) {
         
-?>
+    ?>
     <div class="bg-black p-3 flex flex-col justify-center mt-8" id="card">
         <div class=" flex justify-center items-center content-div rounded-md">
 
@@ -26,12 +28,13 @@
             </div>
             <div class="absolute opacity-0 fd-sh group-hover:opacity-90 group-hover:buttom-0">
                 <div class="pt-8 text-center flex flex-col items-center ">
-                    <a href="/detail?id=<?php echo $movie['movie_id'] ?>"><button id="button-card"
-                        class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 rounded-md hover:bg-red-600 transition-all">See More
+                    <a href="/detail?id=<?php echo $movie['movie_id']?>"><button id="button-card"
+                        class="text-white font-bold p-2 border-red-600 border-2 text-white text-sm w-30 rounded-md hover:bg-red-600 transition-all">
+                        <?php if(empty($_SESSION['user_type'])){echo "See More";}else {if($_SESSION['user_type'] == "admin"){echo "Product Detail";}else{echo "See More";};} ?>
                         </button></a>
                     <a href="https://majorcineplex.com.kh/home"><button id="button-card"
                         class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">Buy Now
-                        </button></a>
+                    </button></a>
                 </div>
             </div>
         </div>
