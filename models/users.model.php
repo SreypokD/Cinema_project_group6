@@ -1,5 +1,5 @@
 <?php 
-function createUser(string $firstName, string $lastName, string $email, string $password, string $user_type) : bool
+function createUser(string $firstName, string $lastName, string $email, string $password, string $user_types) : bool
 {
     global $connection;
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
@@ -9,7 +9,7 @@ function createUser(string $firstName, string $lastName, string $email, string $
         ':last_name' => $lastName,
         ':email' => $email,
         ':passwords' => $password_hash,
-        ':user_type' => $user_type
+        ':user_type' => $user_types
     ]);
     return $statment->rowCount() > 0;
 }
