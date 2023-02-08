@@ -20,8 +20,8 @@ require 'models/users.model.php';
         if (empty($errors)){
             $users = getUser();
             foreach($users as $user){
-                $is_password = password_verify($password, $user['passwords']);
-                if ($email == $user["email"] && ($is_password || $password == $user['passwords'])){
+                $is_password = password_verify($password, $user['password']);
+                if ($email == $user["email"] && ($is_password || $password == $user['password'])){
                     $_SESSION['email'] = $user["email"];
                     $_SESSION['password'] = $user["password"];
                     header('Location:/');
