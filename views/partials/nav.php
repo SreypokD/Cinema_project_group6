@@ -26,9 +26,9 @@
 						d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 				</svg>
 			</a>
-			<?php if(empty($_SESSION['email'])){ ?>
+			<?php if(empty($_SESSION['email']) || $_SESSION['user_type']== "admin"){ ?>
 			<a class="flex items-center <?= urlIs('/register') ? ' bg-gray-800' : 'bg-white' ?> p-2 rounded-xl hover:bg-black" href="/register">
-				<h3 class="text-red-600 font-bold">REGISTER</h3>
+				<h3 class="text-red-600 font-bold"><?php if(empty($_SESSION['user_type'])){echo "REGISTER";}else {if($_SESSION['user_type'] == "admin"){echo "ADD USER";}else{echo "REGISTER";};} ?></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" class=" h-6 w-6 text-red-600" fill="none"
 					viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -82,18 +82,18 @@
 					<span
 						class="<?= urlIs('/booking') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>">BOOKING</span>
 				</a>
-				<a class="<?= urlIs('/contact') ? 'border-white border-y-2' : '' ?> flex items-center space-x-2"
-					href="/contact">
+				<a class="<?= urlIs('/contact') || urlIs('/user') ? 'border-white border-y-2' : '' ?> flex items-center space-x-2"
+					href="<?php if(empty($_SESSION['user_type'])){echo "/contact";}else {if($_SESSION['user_type'] == "admin"){echo "/user";}else{echo "/contact";};} ?>">
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg"
-							class="<?= urlIs('/contact') ? 'font-bold text-white' : 'text-red-500 font-bold' ?> h-6 w-6"
+							class="<?= urlIs('/contact') || urlIs('/user') ? 'font-bold text-white' : 'text-red-500 font-bold' ?> h-6 w-6"
 							fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 								d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
 						</svg>
 					</span>
 					<span
-						class="<?= urlIs('/contact') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>">CONTACT</span>
+						class="<?= urlIs('/contact') || urlIs('/user') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>"><?php if(empty($_SESSION['user_type'])){echo "CONTACT";}else {if($_SESSION['user_type'] == "admin"){echo "SHOW USER";}else{echo "CONTACT";};} ?></span>
 				</a>
 
 
@@ -114,7 +114,7 @@
 
 			</div>
 			
-			<?php if (!(urlIs('/login') || urlIs('/register'))){ ?>
+			<?php if (!(urlIs('/login') || urlIs('/register') || urlIs('/contact'))){ ?>
 			<div class="group_search flex">
 			<div class="lg:flex items-center space-x-2 bg-white py-2 px-10 rounded-full">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black font-bold cursor-pointer" fill="none"

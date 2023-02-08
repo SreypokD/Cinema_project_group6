@@ -21,11 +21,14 @@ require 'models/users.model.php';
             $users = getUser();
             foreach($users as $user){
                 $is_password = password_verify($password, $user['password']);
-                if ($email == $user["email"] && $is_password){
+                if ($email == $user["email"] && ($is_password || $password == $user['password'])){
                     $_SESSION['email'] = $user["email"];
                     $_SESSION['password'] = $user["password"];
                     header('Location:/');
-                    break;
+
+                    if($user["user_type"] == 'admin'){
+                        $_SESSION['user_type'] = $user["user_type"];
+                    }
                 }
                 else if(!($is_password)){
                     $errors['password'] = 'Your password is not correct';

@@ -13,6 +13,8 @@ $routes = [
     '/detail' => 'controllers/detail/detail.controller.php',
     '/seller' => 'controllers/seller/seller.controller.php',
 
+    '/user' => 'controllers/users/user.controller.php',
+    '/delete' => 'controllers/delete/delete.controller.php',
 ];
 
 if (array_key_exists($uri, $routes)) {

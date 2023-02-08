@@ -4,7 +4,9 @@
 require "views/partials/head.php";
 
 require "views/partials/nav.php";
-require "views/partials/banner.php";
+if(empty($_SESSION['user_type'])){
+  require "views/partials/banner.php";
+}
 
 require "models/detail.model.php";
 require "models/movie.model.php";

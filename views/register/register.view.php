@@ -57,7 +57,7 @@
   </div>
 
 
-  <div class="relative z-0 w-full mb-6 group">
+  <div class="relative z-0 w-full group">
     <input type="password" name="verify_pass" id="verify_pass"
       class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer" value="<?php echo isset($_POST['verify_pass'])? $_POST['verify_pass'] : "" ?>">
     <label for="verify_pass"
@@ -72,7 +72,16 @@
     </svg>
     <span class="<?php echo isset($errors['verify_pass'])? 'text-red-600' : 'text-black'?> text-sm"><?php echo isset($errors['verify_pass'])? $errors['verify_pass'] : "." ?></span>
   </div>
-
+  <?php if($_SESSION['user_type'] == "admin"){ ?>
+  <div class = "w-full mb-6 group">
+    <select name="user_type" id="" class="mb-16 w-1/4 bg-black text-white text-sm border-2 border-gray-500 focus:border-white focus:text-white">
+      <option selected disabled>USER TYPE</option>
+      <option value="seller">SELLER</option>
+      <option value="user">USER</option>
+    </select>
+  </div>
+  
+  <?php } ?>
   <div class="grid text-center md:gap-6">
     <div class="relative z-0 w-full mb-6 group">
       <button class="bg-gradient-to-r from-black via-red-600 to-black text-white font-bold hover:text-black text-white py-2 px-40 rounded inline-flex items-center" >
