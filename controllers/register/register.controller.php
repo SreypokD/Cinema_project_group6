@@ -12,11 +12,13 @@ require "models/users.model.php";
         $email = $_POST['email'];
         $password = $_POST['password'];
         $verify_pass = $_POST['verify_pass'];
-        $user_type = $_POST['user_type'];
         $errors = [];
         if(empty($_POST['user_type'])){
             $user_type = "user";
+        }else{
+            $user_type = $_POST['user_type'];
         }
+        // $_SESSION['user_type'] = "";
         // firstname validatiion
         if(empty($first_name)) {
             $errors['first_name'] = 'Please enter a first name';

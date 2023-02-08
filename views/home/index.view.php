@@ -1,9 +1,11 @@
 <?php session_start(); ?>
 <?php require "views/partials/head.php" ?>
 <?php require "views/partials/nav.php" ?>
-<?php require "views/partials/banner.php" ?>
+<?php if(empty($_SESSION['user_type'])){
+  require "views/partials/banner.php";
+} ?>
 
-<main class="ml-8">
+<main class="ml-8 mt-4">
     <div class="grid grid-cols-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
       <!--Card 1-->
 
