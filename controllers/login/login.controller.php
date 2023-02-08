@@ -20,12 +20,15 @@ require 'models/users.model.php';
         if (empty($errors)){
             $users = getUser();
             foreach($users as $user){
-                $is_password = password_verify($password, $user['password']);
-                if ($email == $user["email"] && $is_password){
+                $is_password = password_verify($password, $user['passwords']);
+                if ($email == $user["email"] && ($is_password || $password == $user['passwords'])){
                     $_SESSION['email'] = $user["email"];
                     $_SESSION['password'] = $user["password"];
                     header('Location:/');
-                    break;
+
+                    if($user["user_type"] == 'admin'){
+                        $_SESSION['user_type'] = $user["user_type"];
+                    }
                 }
                 else if(!($is_password)){
                     $errors['password'] = 'Your password is not correct';
