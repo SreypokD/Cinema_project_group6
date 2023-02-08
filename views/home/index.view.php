@@ -19,9 +19,12 @@
           <div class="font-bold text-xl mb-2 text-white"><?php echo $movie['title']; ?></div>
         </div>
 
-        <a href="/movie?id=<?php echo $movie['movie_id'] ?>"><button id="button-card"
-          class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 rounded-md hover:bg-red-600 transition-all ml-8">See More
-        </button></a>
+        <a href="/movie?id=<?php echo $movie['movie_id'] ?>" class= "flex flex-center justify-between mt-6">
+          <button id="button-card"
+            class="bg-gradient-to-r via-red-600 to-black text-white w-28 h-8 hover:text-gray-300 text-white ">See More
+          </button>
+          <img src="https://o.remove.bg/downloads/96535dc2-6beb-48df-ab69-c0c6a8bde377/image-removebg-preview.png" width="40" class= "mr-6 hover:bg-black">
+      </a>
       </div>
  <?php
     }
