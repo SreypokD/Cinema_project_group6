@@ -14,8 +14,7 @@ function sendEmail()
     $lastName = $_POST["last_name"];
     $email = $_POST["email"];
     $userMessage = $_POST["message"];
-    $toEmail = "soknoeurn.srun168@gmail.com";
-
+    
     try
     {
       $mail->isSMPT();
@@ -34,15 +33,15 @@ function sendEmail()
       $mail->Body = "Name: $firstName . ' ' . $lastName<br>Email: $email <br>Message: $userMessage";
 
       $mail->send();
-      $alert = "<div class='alert alert-success'><span>Message Sent Thanks For Contacting Us<span></span></div>";
+      $alert = "<div class='alert-success'><span>Message Sent Thanks For Contacting Us<span></span></div>";
     } catch (Exception $e)
     {
-      $alert = "<div class='alert-error'><span> '.$e->getMessage().'</span></div>";
+      $alert = "<div class='alert-error'><span>$e->getMessage()</span></div>";
     }
 
-    if (mail($toEmail,$firstName, $lastName, $mailHeaders))
-    {
-      $message = "Your Information is Received Successfully!";
-    }
+    // if (mail($toEmail,$firstName, $lastName, $mailHeaders))
+    // {
+    //   $message = "Your Information is Received Successfully!";
+    // }
   }
 }
