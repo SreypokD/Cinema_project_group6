@@ -4,12 +4,6 @@
 <?php require "views/partials/banner.php" ?>
 <?php require "database/database.php" ?>
 
-
-<!-- <main class="h-screen">
-  <div class="p-3">
-    <p>Hello movie page</p>
-  </div>
-</main> -->
 <div class="mb-10 grid grid-cols-4">
 <?php 
     global $connection;
@@ -21,7 +15,6 @@
                     <div class=" max-w-sm flex justify-center items-center content-div rounded-md">
                 
                         <img src="<?php echo $movie['picture']; ?>" alt="" class="ml-8 rounded-md" id="img">
-                        <!-- <div></div> -->
                     <div>
                     <div  class="w-full image-cover rounded-t-md" ></div>
                         <div class="py-8 px-4 rounded-b-md fd-cl group-hover:opacity-25">

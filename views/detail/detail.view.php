@@ -31,7 +31,7 @@ if (isset($_GET['id'])) {
       <hr class="h-1 mb-8">
       <div class="flex mb-8">
         <div class="grid w-full h-full grid-cols-4 sm:grid-cols-6">
-          <div class="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
+          <div class="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg  sm:col-span-4 lg:col-span-5">
             <img src="<?php echo $item['picture']; ?>" class="object-cover object-center">
           </div>
         </div>
