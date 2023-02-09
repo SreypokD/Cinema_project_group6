@@ -23,7 +23,7 @@
           <button id="button-card"
             class="bg-gradient-to-r via-red-600 to-black text-white w-28 h-8 hover:text-gray-300 text-white ">See More
           </button>
-          <img src="https://o.remove.bg/downloads/96535dc2-6beb-48df-ab69-c0c6a8bde377/image-removebg-preview.png" width="40" class= "mr-6 hover:bg-black">
+          <img src="https://thanhniencec.edu.vn/wp-content/uploads/2017/06/icon-new.gif" width="60" class= "mr-6 hover:bg-black">
       </a>
       </div>
  <?php
