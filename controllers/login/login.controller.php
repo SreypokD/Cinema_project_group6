@@ -26,7 +26,7 @@ require 'models/users.model.php';
                     $_SESSION['password'] = $user["password"];
                     header('Location:/');
 
-                    if($user["user_type"] == 'admin'){
+                    if($user["user_type"] == 'admin' || $user["user_type"] == 'user'){
                         $_SESSION['user_type'] = $user["user_type"];
                     }
                 }
