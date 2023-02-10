@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php 
 //  require "controllers/seller/seller.create.controller.php";
  require "views/partials/head.php";

@@ -20,14 +20,21 @@ require 'models/users.model.php';
         if (empty($errors)){
             $users = getUser();
             foreach($users as $user){
-                $is_password = password_verify($password, $user['password']);
-                if ($email == $user["email"] && ($is_password || $password == $user['password'])){
+                $is_password = password_verify($password, $user['passwords']);
+                if ($email == $user["email"] && ($is_password || $password == $user['passwords'])){
                     $_SESSION['email'] = $user["email"];
                     $_SESSION['password'] = $user["password"];
-                    header('Location:/');
-
-                    if($user["user_type"] == 'admin'){
+                    
+                    if($user["user_type"] == 'admin'|| $user["user_type"] == 'user'){
                         $_SESSION['user_type'] = $user["user_type"];
+                    }else{
+                        $_SESSION['user_type'] = "";
+                    }
+                    // header('Location:/');
+                    if ($user["user_type"] == 'admin' || $user["user_type"] == 'user'){
+                        header('location:/');
+                    }else{
+                        header('location:/seller');
                     }
                 }
                 else if(!($is_password)){
