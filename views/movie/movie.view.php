@@ -1,10 +1,10 @@
-<?php session_start(); ?>
-<?php require "views/partials/head.php" ?>
-<?php require "views/partials/nav.php" ?>
-<?php if(empty($_SESSION['user_type'])){
+<?php session_start();
+require "views/partials/head.php";
+require "views/partials/nav.php";
+if(empty($_SESSION['user_type'])){
   require "views/partials/banner.php";
-} ?>
-<?php require "database/database.php" ?>
+};
+require "database/database.php" ?>
 
 
 <div class="mb-10 grid grid-cols-5 ml-8">

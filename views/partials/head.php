@@ -15,5 +15,5 @@
     
 </head>
 <!-- <body class="bg-gradient-to-r from-black via-red-600 to-black min-h-screen"> -->
-<body class="bg-white from-black via-red-600 to-black min-h-screen">
+<body class="bg-white from-black via-red-600 to-black min-h-screen h-screen">
 
