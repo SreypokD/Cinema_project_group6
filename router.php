@@ -11,9 +11,12 @@ $routes = [
     '/validate' => 'controllers/register/register.validation.controller.php',
     '/login' => 'controllers/login/login.controller.php',
     '/detail' => 'controllers/detail/detail.controller.php',
+    // Seller 
     '/seller' => 'controllers/seller/seller.controller.php',
-    
+    '/form-movie' => 'controllers/seller/seller.controller.php',
+    '/edit' => 'controllers/seller/seller.controller.php',
     '/create' => 'controllers/seller/seller.create.controller.php',
+
     '/user' => 'controllers/users/user.controller.php',
     '/delete' => 'controllers/delete/delete.controller.php',
 ];
