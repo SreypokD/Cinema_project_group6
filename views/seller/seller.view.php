@@ -15,16 +15,20 @@
 
     
 
-<div class=" mx-48 mt-12 " >
+<div class=" mx-8 mt-12 " >
       <?php 
         global $connection;
         $movies = getMovie();
         foreach($movies as $movie) {  
      ?>  
     <div class="flex justify-between bg-stone-800 mt-5">
-            <div class="max-w-sm w-1/5 ">
-                <img src="<?php echo $movie['picture']; ?>" alt="" class="h-48 w-96">
+        <div class="w-80">
+            <div class=" w-full bg-red-800">
+                <img src="<?php echo $movie['picture']; ?>" alt="" class="h-48 w-full">
             </div>
+        </div>
+        <div class="w-4/6">
+
             <div class="flex text-white flex-col justify-center">
                 <p class = "hover:underline"> <strong class ="text-red-500 ">Title :</strong> <?php echo $movie['title'];?> </p>
                 <p class = "hover:underline"><strong class ="text-red-500">Description :</strong> <?php echo $movie['description'] ;?></p> 
@@ -42,6 +46,7 @@
                     </svg>
                 </a>
             </div>
+        </div>
     </div>
     <?php
         }
