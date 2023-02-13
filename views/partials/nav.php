@@ -108,10 +108,7 @@
 					<span
 						class="<?= urlIs('/contact') || urlIs('/user') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>"><?php if(empty($_SESSION['user_type'])){echo "CONTACT";}else {if($_SESSION['user_type'] == "admin"){echo "SHOW USER";}else{echo "CONTACT";};} ?></span>
 				</a>
-
-
 			</div>
-			
 			<?php if (!(urlIs('/login') || urlIs('/register') || urlIs('/contact') || urlIs('/seller') || !empty($_SESSION['user_type']))){ ?>
 			<div class="group_search flex">
 			<div class="lg:flex items-center space-x-2 bg-white py-2 px-10 rounded-full">
