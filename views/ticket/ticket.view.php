@@ -40,9 +40,16 @@
 							<div class="ml-auto text-blue-800">Ticket ID</div>
 						</div>
 						<div class="border-b border-dashed border-b-2 my-4"></div>
-						<div class="flex items-center">
-						
+						<div class="flex items-center justify-between">
+							<div class="">
+								<span class="">Total Price</span>
+								<div class="font-semibold">$3.50</div>
 							</div>
+							<div class="">
+								<span class="">Date</span>
+								<div class="font-semibold">08/02/2023 19:00:00</div>
+							</div>
+						</div>
 							<div class="border-b border-dashed border-b-2 my-5 pt-5">
 								<div class="absolute rounded-full w-5 h-5 ront-bold bg-stone-900 from-black via-red-600 to-black -mt-2 -left-2"></div>
 								<div class="absolute rounded-full w-5 h-5 ront-bold bg-stone-900 from-black via-red-600 to-black -mt-2 -right-2"></div>
