@@ -1,6 +1,6 @@
 <?php 
 require "views/partials/head.php";
-require "views/partials/nav.php";
+// require "views/partials/nav.php";
 require "models/detail.model.php";
 $id = '';
 $item = '';
@@ -19,15 +19,15 @@ if (isset($_GET['id'])) {
         <p class="text-center text-red-700 text-lg font-bold">CREATE MOVIE</p>
             <div class="mb-4">
                 <label class="block text-red-700" for="title">Movie Title</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="title" name="title" value="<?php echo ($item?$item['title']:$item) ?>">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Title" name="title" value="<?php echo ($item?$item['Title']:$item) ?>">
             </div>
             <div class="mb-4">
                 <label class="block text-red-700" for="description">Description</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="description" name="description" value="<?php echo ($item?$item['description']:$item) ?>">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Description" name="description" value="<?php echo ($item?$item['Description']:$item) ?>">
             </div>
             <div class="mb-4">
                 <label class="block text-red-700" for="language" name="language">Choose a language:</label>
-                <select name="language" id="language" class=" w-full py-2 px-3 border rounded" value="<?php echo ($item?$item['language']:$item) ?>>
+                <select name="language" id="language" class=" w-full py-2 px-3 border rounded" value="<?php echo ($item?$item['Language']:$item) ?>>
                     <option value="khmer" name="khemr">khmer</option>
                     <option value="english" name="english">English</option>
                     <option value="korean" name="korean">Korean</option>
