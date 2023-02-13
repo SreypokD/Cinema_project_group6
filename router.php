@@ -16,7 +16,6 @@ $routes = [
     '/form-movie' => 'controllers/seller/seller.controller.php',
     '/edit' => 'controllers/seller/seller.controller.php',
     '/create' => 'controllers/seller/seller.create.controller.php',
-
     '/user' => 'controllers/users/user.controller.php',
     '/delete' => 'controllers/delete/delete.controller.php',
 ];
