@@ -8,10 +8,13 @@
 //  require "models/movies/movie.edit.model.php";
 
 ?>
-
-<a href="/form-movie"><button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
-  Add Movie
-</button></a>
+<div class="m-8 text-white">
+    <button>
+        <a href="/form-movie"><button class=" bg-transparent hover:ront-bold bg-gradient-to-r from-black via-red-600 to-black font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+          Add Movie
+        </button></a>
+    </button>
+</div>
 
     
 
