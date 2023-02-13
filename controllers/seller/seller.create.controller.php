@@ -26,7 +26,9 @@ else {
     }
 }
 
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // echo $title ."<br>",$description."<br>" ,$language ."<br>"  , $releastDate ."<br>", $duration."<br>" ,$picture ."<br>", $startDate."<br>",$endDate."<br>" , $format."<br>",$subtitle;
     if (!empty($title) && !empty($description) && !empty($language) && !empty($releastDate) && !empty($duration) && !empty($picture) && !empty($startDate) && !empty($endDate) && !empty($format) && !empty($subtitle)){
         $movieId =$cinemaId=createMovie($title , $description , $language , $releastDate, $duration ,$picture);
         getToShow($startDate,$endDate,$format,$subtitle,$movieId,$cinemaId);
