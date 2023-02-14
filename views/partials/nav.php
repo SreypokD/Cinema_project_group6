@@ -46,7 +46,7 @@
 			<div class="flex space-x-10">
 				<a href="<?php if(empty($_SESSION['email']) || $_SESSION['user_type'] == 'admin'){echo "/";}else{echo "/seller";} ?>" class="flex items-center space-x-2 <?= urlIs('/') || urlIs('/seller') ? 'border-white border-y-2' : '' ?>">
 					<span>
-					<?php if(empty($_SESSION['email']) || $_SESSION['user_type'] == 'admin'){ ?>
+					<?php if(empty($_SESSION['email']) || $_SESSION['user_type'] == 'admin' || $_SESSION['user_type'] == 'user'){ ?>
 						<svg xmlns="http://www.w3.org/2000/svg"
 							class="<?= urlIs('/') || urlIs('/seller') ? ' font-bold text-white' : 'text-red-500 font-bold' ?> h-6 w-6"
 							fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,7 +62,7 @@
 						</svg>
 						<?php } ?>
 					</span>
-					<span class="<?= urlIs('/')|| urlIs('/seller') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>"><?php if(empty($_SESSION['email']) || $_SESSION['user_type'] == 'admin'){echo "HOME";}else{echo "SELLER";} ?></span>
+					<span class="<?= urlIs('/')|| urlIs('/seller') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>"><?php if(empty($_SESSION['email']) || $_SESSION['user_type'] == 'admin' || $_SESSION['user_type'] == 'user'){echo "HOME";}else{echo "SELLER";} ?></span>
 				</a>
 				<?php if(empty($_SESSION['email']) || $_SESSION['user_type']== "admin" || $_SESSION['user_type']== "user"){ ?>
 				<a class="<?= urlIs('/movie') ? 'border-white border-y-2' : '' ?> flex items-center space-x-2"
