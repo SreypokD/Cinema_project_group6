@@ -28,3 +28,10 @@ function newMovie() : array
     $statement -> execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
+function userLogin(string $email)
+{
+    global $connection;
+    $statement = $connection->prepare("SELECT * FROM users WHERE email=:email");
+    $statement->execute([':email' => $email]);
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
