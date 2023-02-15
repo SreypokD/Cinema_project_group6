@@ -1,40 +1,31 @@
 <?php
 require "database/database.php";
-require "models/seller/seller.model.php"; 
+// require "models/seller/seller.model.php"; 
+require "models/movies/movie.create.model.php";
 
-// echo $title ."<br>",$description."<br>" ,$language ."<br>"  , $releastDate ."<br>", $duration."<br>" ,$picture;
-// if(isset($_GET['id'])){
-//     $id = $_GET['id']; 
-//     $update = updateMovie($title, $description, $language, $releastDate, $duration, $picture, $id);
-//     header("Location: /seller");
-// }
-// else {
-//     if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['language']) && !empty($_POST['releastDate']) && !empty($_POST['duration']) && !empty($_POST['picture'])){
-        
-//         createMovie($title , $description , $language , $releastDate, $duration ,$picture);
-//         header("Location: /seller");
-//     }
-// }
+
 function validationDate(string $date, $format = 'Y-m-d'): bool
 {
     $dateTime = DateTime::createFromFormat($format, $date);
     return $dateTime && $dateTime->format($format) === $date;
 }
+$id = "";
+$title = $_POST['title'];
+$description = $_POST['description'];
+$language = $_POST['language'];
+$releastDate = $_POST['releastDate'];
+// $duration = $_POST['duration'];
+$picture = $_POST['picture'];
+$startDate = $_POST['startDate'];
+$endDate = $_POST['endDate'];
+$subtitle = $_POST['subtitle'];
+$hour = $_POST['h'];
+$min = $_POST['mn'];
+$massageEorror = [];
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = "";
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $language = $_POST['language'];
-    $releastDate = $_POST['releastDate'];
-    // $duration = $_POST['duration'];
-    $picture = $_POST['picture'];
-    $startDate = $_POST['startDate'];
-    $endDate = $_POST['endDate'];
-    $format = $_POST['format'];
-    $subtitle = $_POST['subtitle'];
-    $hour = $_POST['h'];
-    $min = $_POST['mn'];
-    $massageEorror = [];
+
+    // validation 
+
     if(empty($title)){
         $massageEorror['title'] = "Please enter a title";
     }
@@ -47,9 +38,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($releastDate)){
         $massageEorror['releastDate'] = "Please enter a releastDate";
     }
-    // if(empty($hour)){
-    //     $massageEorror['h'] = "Please enter a hour";
-    // }
     if(!empty($hour)){
         if(strlen($hour) == 1 && $hour <= 4){
             $hour = true;
@@ -65,6 +53,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $minute = true;
         }else{
             $massageEorror['min'] = "We need at least 60 minutes";
+        }
+        if(strlen($min)==1){
+            $timeMin = "0".$min;
         }
     }
     if(empty($min)){
@@ -101,21 +92,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }else{
         $massageEorror['endDate'] = "Please enter a end date";
     }
-    // if(empty($endDate)){
-    //     $massageEorror['endDate'] = "Please enter a end date";
-    // }
-    if(empty($format)){
-        $massageEorror['format'] = "Please enter a format";
-    }
+
     if(empty($subtitle)){
         $massageEorror['subtitle'] = "Please enter a subtitle";
-    }
+    }  
 
-    // if (!empty($title) && !empty($description) && !empty($language) && !empty($releastDate) && !empty($duration) && !empty($picture) && !empty($startDate) && !empty($endDate) && !empty($format) && !empty($subtitle)){
-    //     $movieId =$cinemaId=createMovie($title , $description , $language , $releastDate, $duration ,$picture);
-    //     getToShow($startDate,$endDate,$format,$subtitle,$movieId,$cinemaId);
-    //     header("Location: /seller");
-    // }
-     
+}
+//  insert data to database 
+if (empty($massageEorror['title']) && empty($massageEorror['subtitle']) && empty($massageEorror['endDate']) && empty($massageEorror['startDate']) && empty($massageEorror['releastDate']) && empty($massageEorror['picture']) && empty($massageEorror['h']) && empty($massageEorror['mn'])){
+    $time = "0" . $hour . ":" . $timeMin . ":00";
+    createMovie($title , $description , $language , $releastDate, $time ,$picture ,$startDate, $endDate, $subtitle);
+    header("Location: /seller");
 }
 require "views/seller/seller.form.view.php";

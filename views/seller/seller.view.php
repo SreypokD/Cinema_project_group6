@@ -16,8 +16,6 @@
     </button>
 </div>
 
-    
-
 <div class=" mx-8 mt-12 " >
       <?php 
         global $connection;

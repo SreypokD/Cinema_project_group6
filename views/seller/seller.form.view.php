@@ -3,6 +3,7 @@ require "views/partials/head.php";
 // require "views/partials/nav.php";
 require "models/movie.model.php";
 
+
 $id = '';
 $item = '';
 $action='/create';
@@ -128,18 +129,6 @@ if (isset($_GET['id'])) {
         </div>
         </div>
         <div class="flex items-center justify-between">
-            <div class="mb-2 text-white w-6/12">
-                <label class="block text-white" for="image" name="format">Format</label>
-                <div class="text-sm flex gap-4">
-                    <input type="radio" id="vehicle1" name="format" value="2D" checked="checked">
-                    <label for="vehicle1">2D</label><br>
-                    <input type="radio" id="vehicle2" name="format" value="3D">
-                    <label for="vehicle2">3D</label><br>
-                    <input type="radio" id="vehicle3" name="format" value="Screen-X">
-                    <label for="vehicle3">Screen-X</label><br>
-                </div>
-                <span class="<?php echo isset($massageEorror['format'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['format'])? $massageEorror['format']:"."?></span>
-            </div>
             <div class="mb-4 text-white w-6/12">
                 <label class="block text-white" for="subtitle" name="subtitle">Subtitle:</label>
                 <div class="text-sm flex gap-4">
