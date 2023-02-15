@@ -281,6 +281,52 @@ if (isset($_GET['id'])) {
 </div>
 
 <!-- payment on movie -->
+<div class="modalNew fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto"
+        id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable relative  w-7/12 pointer-events-none m-auto mt-5 ">
+            <div
+            class="modal-content border-red-4 shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md text-current">
+            <div
+                class="modal-header flex flex-shrink-0 justify-center font-bold p-4 border-b border-red-600 rounded-t-md">
+                <h5 class="text-xl font-medium leading-normal ">
+                PAYMENT
+                </h5>
+        </div>
+        <div class="flex justify-center">
+          <img src="https://www.ababank.com/fileadmin/user_upload/Mobile_app/mobile_plastic_cards/ABA_Issue_Plastic-Oct_EN.jpg"
+           class=" w-full h-52">
+        </div>
+        <!--  model form -->
+        <div class="modal-body flex justify-evenly ">
+        <div class="w-6/12 p-5 ">
+            <label for="" class = "font-bold">Name on your card </label>
+            <input
+                class="shadow text-gray-900 bg-gray-300 appearance-none border rounded-xl w-full py-2 px-2 leading-tight focus:shadow-outline outline-none "
+                type="text" placeholder="Helen" name="card-name" value="1">
+            <label for="" class = "font-bold">Card number</label>
+            <input
+                class="shadow text-gray-900 bg-gray-300 appearance-none border rounded-xl w-full py-2 px-2 leading-tight focus:shadow-outline outline-none "
+                type="text" placeholder="0000-0000-0000-0000" name="card-name" value="">
+            <label for="" class = "font-bold">CVV</label>
+            <input
+                class="shadow text-gray-900 bg-gray-300 appearance-none border rounded-xl w-full py-2 px-2 leading-tight focus:shadow-outline outline-none "
+                type="password" placeholder=" * * *" name="card-name" value="">
+           </div>
+          <div class="modal-img bg-blue-900 my-5 p-5">
+            <img src="https://www.ababank.com/fileadmin/user_upload/Mobile_app/aba_pay/aba_cib_qr_code.jpg" alt="">
+          </div>
+        </div>
+        <div
+            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-between p-4 border-t border-red-600 rounded-b-md">
+            <button type="button"
+            class="hideModalNew inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+            data-bs-dismiss="modal">
+            PAY NOW
+            </button>
+        </div>
+        </div>
+    </div>
+</div>
 
 
 <script src='views/js/confirmpruchase.js'></script>
