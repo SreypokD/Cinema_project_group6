@@ -1,5 +1,5 @@
 <?php
-require "models/seller.model.php";
+require "models\seller\seller.model.php";
 $heading = "Seller Page";
 // print_r($_SERVER);
 if( $_SERVER["PATH_INFO"]=="/seller"){

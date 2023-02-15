@@ -1,5 +1,5 @@
 <?php
-
+    require "database/database.php";
     function createMovie(string $title, string $description, string $language , string $releastDate, string $duration , string $picture ) : bool
     {
         global $connection;
