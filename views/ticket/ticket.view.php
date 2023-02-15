@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require "views/partials/head.php" ?>
 <?php require "views/partials/nav.php" ?>
+<?php require "models/ticket.model.php" ?>
 <?php if(empty($_SESSION['user_type'])){
   require "views/partials/banner.php";
 } ?>
@@ -14,6 +15,11 @@
 		transform: translateX(-90px);
 	}
 </style>
+<?php 
+	global $connection;
+	
+
+?>
 		<div class="flex flex-col w-full">
 			<div class="bg-white relative drop-shadow-2xl  rounded-3xl p-4 m-8 w-80 h-1/4">
 				<div class="flex-none sm:flex">
