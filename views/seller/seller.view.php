@@ -35,7 +35,7 @@
             <div class="flex text-white flex-col justify-center mt-10">
                 <p class = "hover:underline"> <strong class ="text-red-500 ">Title :</strong> <?php echo $movie['title'];?> </p>
                 <p class = "hover:underline"><strong class ="text-red-500">Description :</strong> <?php echo $movie['description'] ;?></p> 
-                <p class = "hover:underline"><strong class ="text-red-500">Release date :</strong> <?php echo $movie['releast_date']; ?></p>                                                                                                                                                         
+                <p class = "hover:underline"><strong class ="text-red-500">Release date :</strong> <?php echo $movie['release_date']; ?></p>                                                                                                                                                         
             </div>
             <div class="flex justify-end mt-4">
                 <a href="/edit?id=<?php echo $movie['movie_id']; ?>">
