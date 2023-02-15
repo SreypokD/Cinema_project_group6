@@ -18,7 +18,7 @@ require "models/movie.model.php";
 global $connection;
 $id = '';
 $item = '';
-$listShow = listShow();
+// $listShow = listShow();
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
   $item = getMovieItem($id);
@@ -50,12 +50,12 @@ if (isset($_GET['id'])) {
           </div>
           <div class="w-full text-white">
             <p class = "text-red-500 font-bold ">SUBTITLE : <span class="text-white text-sm">
-                <?php echo $item['subtitle']; ?>
+                <?php echo $item['sub_title']; ?>
               </span></p>
           </div>
           <div class="w-full text-white">
             <p class = "text-red-500 font-bold ">FORMAT : <span class="text-white text-sm">
-                <?php echo $item['format']; ?>
+              2D
               </span></p>
           </div>
           <div class="w-full text-white">
@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
             </p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold">DECRIPTION : <span class="text-white text-sm">
+            <p class = "text-red-500 font-bold">DESCRIPTION : <span class="text-white text-sm">
               <?php echo $item['description'] ?></span>
             </p>
           </div>
