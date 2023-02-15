@@ -14,13 +14,12 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 $language = $_POST['language'];
 $releastDate = $_POST['releastDate'];
-// $duration = $_POST['duration'];
+$duration = $_POST['duration'];
 $picture = $_POST['picture'];
 $startDate = $_POST['startDate'];
 $endDate = $_POST['endDate'];
 $subtitle = $_POST['subtitle'];
-$hour = $_POST['h'];
-$min = $_POST['mn'];
+
 $massageEorror = [];
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -38,29 +37,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($releastDate)){
         $massageEorror['releastDate'] = "Please enter a releastDate";
     }
-    if(!empty($hour)){
-        if(strlen($hour) == 1 && $hour <= 4){
-            $hour = true;
-        }else{
-            $massageEorror['h'] = "We need at least five hours or four hours";
-        }
+    if(empty($duration)){
+        $massageEorror['duration'] = "Please enter a duration";
     }
-    if(empty($hour)){
-        $massageEorror['h'] = "Please enter a hour";
-    }
-    if(!empty($min)){
-        if($min < 60){
-            $minute = true;
-        }else{
-            $massageEorror['min'] = "We need at least 60 minutes";
-        }
-        if(strlen($min)==1){
-            $timeMin = "0".$min;
-        }
-    }
-    if(empty($min)){
-        $massageEorror['min'] = "Please enter a minute";
-    }
+    
     if(empty($picture)){
         $massageEorror['picture'] = "Please enter a picture";
     }
@@ -99,9 +79,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 //  insert data to database 
-if (empty($massageEorror['title']) && empty($massageEorror['subtitle']) && empty($massageEorror['endDate']) && empty($massageEorror['startDate']) && empty($massageEorror['releastDate']) && empty($massageEorror['picture']) && empty($massageEorror['h']) && empty($massageEorror['mn'])){
-    $time = "0" . $hour . ":" . $timeMin . ":00";
-    createMovie($title , $description , $language , $releastDate, $time ,$picture ,$startDate, $endDate, $subtitle);
+if (empty($massageEorror['title']) && empty($massageEorror['subtitle']) && empty($massageEorror['endDate']) && empty($massageEorror['startDate']) && empty($massageEorror['releastDate']) && empty($massageEorror['picture'])  && empty($massageEorror['duration'])){
+   
+    createMovie($title , $description , $language , $releastDate, $duration ,$picture ,$startDate, $endDate, $subtitle);
     header("Location: /seller");
 }
 require "views/seller/seller.form.view.php";
