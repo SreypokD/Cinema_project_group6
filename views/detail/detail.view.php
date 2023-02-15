@@ -24,7 +24,7 @@ if (isset($_GET['id'])) {
   $item = getMovieItem($id);
 }
 ?>
-<div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
+<div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4" >
   <div class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl ">
     <div class="relative w-full px-4 pt-14 pb-8 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-black">
       <div>
@@ -221,5 +221,68 @@ if (isset($_GET['id'])) {
     </div>
   </div>
 </div>
+<!-- confirm pruchase  -->
+    <div class="flex justify-end mr-48">
+        <button id="button-card"
+            class="showModal text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">confirm pruchase
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto "
+        id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable relative w-7/12 pointer-events-none m-auto mt-5 ">
+            <div
+            class="modal-content border-red-4 shadow-lg relative flex flex-col w-full p-4  pointer-events-auto bg-white bg-clip-padding  rounded-md text-current">
+            <div
+                class="modal-header flex flex-shrink-0 justify-center p-2  border-b border-red-500 rounded-t-md">
+                <h5 class="text-xl leading-normal font-bold ">
+                CONFIRM PURCHASE
+                </h5>
+            </div>
+        <div class="flex justify-between p-5">
+          <div class="flex  flex-col justify-center mt-2">
+            <p class = "hover:underline"> <strong class ="text-red-500 ">Title :</strong> AVATA EP 2</p>
+            <p class = "hover:underline"><strong class ="text-red-500">Ticket Name:</strong> Ticket 11</p> 
+            <p class = "hover:underline"><strong class ="text-red-500">Release date:</strong> 02/03/2023</p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Seat:</strong> 2F </p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Hall:</strong> Hall 1</p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Time:</strong> 9:30 | 11:45 </p>                                                                                                                                                         
+          </div>
+          <div class="w-36">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdNRsO-rmo5fnVt0u1FwojBzK8krwrTYyPuA&usqp=CAU" >
+          </div>
+        </div>
+        <div class="flex justify-between mx-3 ">
+          <div class="flex justify-center p-2">
+            <p class = "hover:underline"><strong class ="text-red-500">Ticket :</strong></p> 
+            <input type="number" class= " ml-2 w-12 bg-red-500 text-white outline-none ">
+          </div>
+          <div class="flex justify-center p-2">
+            <p class = "hover:underline"><strong class ="text-red-500">Total :</strong> $00</p> 
+            
+          </div>
+        </div>
+        <div
+            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-between p-4 border-t border-red-600 rounded-b-md">
+            <button type="button"
+            class="hideModal inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+            data-bs-dismiss="modal">
+            Cancel
+            </button>
+            <button type="button" id = "" 
+            class="addShowModal inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-1">
+            Payment
+            </button>
+        </div>
+        </div>
+    </div>
 </div>
+
+<!-- payment on movie -->
+
+
+<script src='views/js/confirmpruchase.js'></script>
+
 <?php require "views/partials/footer.php" ?>
