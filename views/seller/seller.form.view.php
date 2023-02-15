@@ -76,9 +76,9 @@ if (isset($_GET['id'])) {
                     </svg>
                 </div>
                 <input datepicker type="text"
-                    class="w-full bg-gray-50 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="date" name="releastDate"
-                    value="<?php echo ($item?$item['release_date']:$item)?>">
+                    value="<?php echo ($item?$item['releast_date']:$item)?>">
             </div>
             <span class="<?php echo isset($massageEorror['releastDate'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['releastDate'])? $massageEorror['releastDate']:"."?></span>
         </div>
@@ -103,7 +103,7 @@ if (isset($_GET['id'])) {
                     </svg>
                 </div>
                 <input datepicker type="text"
-                    class="w-full bg-gray-50 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="startDate" name="startDate"
                     value="<?php echo ($item?$item['start_date']:$item)?>">
             </div>
@@ -121,7 +121,7 @@ if (isset($_GET['id'])) {
                     </svg>
                 </div>
                 <input datepicker type="text"
-                    class="w-full bg-gray-50 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="endDate " name="endDate"
                     value="<?php echo ($item?$item['end_date']:$item)?>">
             </div>
