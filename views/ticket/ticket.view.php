@@ -38,13 +38,13 @@
 								</span>
 								<h2 class="font-medium">DATE MOVIE</h2>
 							</div>
-							<div class="ml-auto text-blue-800">DM- <?php echo $ticketItem['ticket_id']  ?> </div>
+							<div class="ml-auto text-blue-800">DM-00<?php echo $ticketItem['ticket_id']  ?> </div>
 						</div>
 						<div class="border-b border-dashed border-b-2 my-4"></div>
 						<div class="flex items-center justify-between">
 							<div class="">
 								<span class="">Total Price</span>
-								<div class="font-semibold">$3.50</div>
+								<div class="font-semibold"><?php echo $ticketItem['price'] . '$' ?></div>
 							</div>
 							<div class="">
 								<span class="">Date</span>
