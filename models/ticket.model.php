@@ -1,5 +1,5 @@
 <?php
-require "database/cinema_g6.sql";
+require "database/database.php";
 
 function getTicket() : array
 {
@@ -8,3 +8,5 @@ function getTicket() : array
   $ticketItems = $statement->fetchAll();
   return $ticketItems;
 }
+
+
