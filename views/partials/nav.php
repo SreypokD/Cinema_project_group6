@@ -92,7 +92,7 @@
 						</svg>
 					</span> 
 					<span
-						class="<?= urlIs('/ticket') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>">BUY TICKET</span>
+						class="<?= urlIs('/ticket') || urlIs('/booking') ? ' font-bold text-white' : 'text-red-500 font-bold' ?>">BUY TICKET</span>
 				</a>
 				<?php } ?>
 				<a class="<?= urlIs('/contact') || urlIs('/user') ? 'border-white border-y-2' : '' ?> flex items-center space-x-2"
