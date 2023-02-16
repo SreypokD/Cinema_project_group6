@@ -9,3 +9,10 @@ function getMovie() : array
     $movieItems = $statement->fetchAll();
     return $movieItems;
 }
+function getMovieItem(int $id)
+{
+    global $connection;
+    $statement = $connection->prepare("SELECT * FROM movies WHERE movie_id=:id");
+    $statement->execute([':id' => $id]);
+    return $statement->fetch();
+}
