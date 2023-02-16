@@ -16,7 +16,7 @@ function getShow(int $id)
     global $connection;
     $statement = $connection->prepare("SELECT * FROM shows  WHERE movie_id= :id");
     $statement->execute([':id' => $id]);
-    return $statement->fetch();
+    return $statement->fetchAll();
 }
 
 function listShow() : array

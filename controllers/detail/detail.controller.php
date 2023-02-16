@@ -6,7 +6,7 @@ $listShow = listShow();
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
   $item = getMovieItem($id);
-  $show = getShow($id);
+  $shows = getShow($id);
 }
 // print_r (getShow($id));
 require "views/detail/detail.view.php";
