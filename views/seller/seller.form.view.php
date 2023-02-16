@@ -1,4 +1,5 @@
 <?php 
+// echo updateMovie();
 require "views/partials/head.php";
 // require "views/partials/nav.php";
 require "models/movie.model.php";
@@ -7,17 +8,19 @@ $id = '';
 $item = '';
 $action='/create';
 $label = 'Create';
+$update = 'CREATE MOVIE';
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
   $action='/create'.'?id='.$id;
   $label = "Update";
+  $update = 'UPDATE MOVIE';
   $item = getMovieItem($id);
 }
 
 ?>
 <div class="mx-96 pt-8">
-    <form action="/create" class="bg-black shadow-md rounded-xl px-12 pt-6 pb-8 mb-4" method="post">
-        <p class="text-center text-white text-3xl font-bold pb-4">CREATE MOVIE</p>
+    <form action="<?php echo $action;?>" class="bg-black shadow-md rounded-xl px-12 pt-6 pb-8 mb-4" method="post">
+        <p class="text-center text-white text-3xl font-bold pb-4"><?php echo $update ?></p>
         <div class="">
                 <label class="block text-white" for="title">Movie Title</label>
                 <input
