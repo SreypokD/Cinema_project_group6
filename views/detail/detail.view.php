@@ -216,6 +216,7 @@ require "views/partials/nav.php";
     </div>
   </div>
 </div>
+<?php if ($_SESSION['user_type'] == "user") { ?>
 <!-- confirm pruchase  -->
     <div class="flex justify-end mr-48">
         <button id="button-card"
@@ -225,7 +226,7 @@ require "views/partials/nav.php";
     </div>
 
     <!-- Modal -->
-    <div class="modal fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto "
+    <div class="modal fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto"
         id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable relative w-7/12 pointer-events-none m-auto mt-5 ">
             <div
@@ -322,7 +323,7 @@ require "views/partials/nav.php";
         </div>
     </div>
 </div>
-
+<?php } ?>
 
 <script src='views/js/confirmpruchase.js'></script>
 

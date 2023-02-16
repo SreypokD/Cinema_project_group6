@@ -1,4 +1,5 @@
 <?php 
+session_start();
  require "views/partials/head.php";
  require "views/partials/nav.php";
  require "database/database.php";
