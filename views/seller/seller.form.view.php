@@ -3,7 +3,6 @@ require "views/partials/head.php";
 // require "views/partials/nav.php";
 require "models/movie.model.php";
 
-
 $id = '';
 $item = '';
 $action='/create';
@@ -35,14 +34,13 @@ if (isset($_GET['id'])) {
             </div>
         
         <div class="">
-            <label class="block text-white" for="description">Description</label>
-            <input
-                class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline"
-                type="text" placeholder="Description" name="description"
-                value="<?php echo ($item?$item['description']:$item)?>">
-            <span class="<?php echo isset($massageEorror['description'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['description'])? $massageEorror['description']:"."?></span>
-        </div>
+            <label class="block text-white" for="description"></label>
 
+        </div>
+        <textarea name="description" id="" cols="30" rows="10"  class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline" type="text" placeholder="Description" name="description">
+            <?php echo ($item?$item['description']:$item)  ?> 
+        </textarea>
+        <span class="<?php echo isset($massageEorror['description'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['description'])? $massageEorror['description']:"."?></span>
         <div class="flex items-center justify-between">
         <div class="w-6/12">
             <label class="block text-white" for="language" name="language">Choose a language:</label>
