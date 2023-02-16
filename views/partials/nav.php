@@ -127,7 +127,7 @@
 	</div>
 	</div>
 </nav>
-<div class="profile flex fixed justify-center items-center top-0 left-0  w-full w-full">
+<div class="profile flex fixed hidden justify-center items-center top-0 left-0  w-full w-full">
 
 	<div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
 		<img src="https://source.unsplash.com/150x150/?portrait?3" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">

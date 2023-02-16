@@ -3,7 +3,6 @@
 require "database/database.php";
 
 
-<<<<<<< HEAD
 function getMovieItem(int $id)
 {
     global $connection;
@@ -11,7 +10,6 @@ function getMovieItem(int $id)
     $statement->execute([':id' => $id]);
     return $statement->fetch();
 }
-=======
 // function getMovieItem(int $id)
 // {
 //     global $connection;
@@ -19,7 +17,6 @@ function getMovieItem(int $id)
 //     $statement->execute([':id' => $id]);
 //     return $statement->fetch();
 // }
->>>>>>> seller
 
 function getShow(int $id)
 {
