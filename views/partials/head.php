@@ -16,5 +16,5 @@
     
 </head>
 <body class="bg-gradient-to-r from-black via-red-600 to-black min-h-screen">
-<!-- <body class="ront-bold bg-stone-900 from-black via-red-600 to-black "> -->
+<!-- <body class="bg-white"> -->
 
