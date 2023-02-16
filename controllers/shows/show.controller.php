@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }else{
         $shows = getShow();
         foreach($shows as $show){
-            if ($show['format'] == $screen && $show['cinema'] == $cinema && $show['time'] == $time && $show['hall'] == $hall){
+            if ($show['format'] == $screen && $show['cinema'] == $cinema && $show['time'] == $time && $show['hall'] == $hall && $formate == $show['date']){
                 $errors['show'] = "It have all ready show";
             }else if ($movieInfo['start_date'] == $formate){
                 $errors['show'] = "You need to less than date start";
