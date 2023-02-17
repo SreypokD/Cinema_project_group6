@@ -24,6 +24,13 @@ if (isset($_GET['id'])) {
   $item = getMovieItem($id);
 }
 ?>
+
+<!-- add -->
+<?php
+  if(isset($_POST['name'])) {
+    $total = $_POST['name'];
+  }
+?>
 <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4" >
   <div class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl ">
     <div class="relative w-full px-4 pt-14 pb-8 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-black">
@@ -254,24 +261,24 @@ if (isset($_GET['id'])) {
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdNRsO-rmo5fnVt0u1FwojBzK8krwrTYyPuA&usqp=CAU" >
           </div>
         </div>
-        <div class="flex justify-between mx-3 ">
+       <div class="flex mx-3 flex justify-between">
           <div class="flex justify-center p-2">
-            <p class = "hover:underline"><strong class ="text-red-500">Ticket :</strong></p> 
-            <input type="number" class= " ml-2 w-12 bg-red-500 text-white outline-none ">
+            <p class = "hover:underline"><strong class ="text-red-500">Ticket :</strong></p>  
+            <input type="number" name="ticketNumber" id="ticketNumber" onchange="muliply();" class= " ml-2 w-12 border-2 border-slate-900 outline-none ">             
           </div>
-          <div class="flex justify-center p-2">
-            <p class = "hover:underline"><strong class ="text-red-500">Total :</strong> $00</p> 
-            
+          <div class="flex p-2">          
+              <div>Total price : <input type="text" name="total" id="total" class="bg-red-500 w-14 text-center"></div>     
           </div>
         </div>
+
         <div
             class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-between p-4 border-t border-red-600 rounded-b-md">
-            <button type="button"
+            <button type="button" id="cancel"
             class="hideModal inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
             data-bs-dismiss="modal">
             Cancel
             </button>
-            <button type="button" id = "" 
+            <button type="button" 
             class="addShowModal inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out ml-1">
             Payment
             </button>

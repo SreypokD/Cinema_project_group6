@@ -18,3 +18,4 @@ function listShow() : array
     $statement->execute();
     return $statement->fetchAll();
 }
+
