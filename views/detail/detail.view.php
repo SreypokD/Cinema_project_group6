@@ -1,18 +1,10 @@
-<?php session_start(); ?>
-
-<?php
+<?php 
+session_start();
 require "views/partials/head.php";
-
 require "views/partials/nav.php";
-if(empty($_SESSION['user_type'])){
-  require "views/partials/banner.php";
-}
-
-require "models/detail.model.php";
-require "models/movie.model.php";
-
 ?>
 
+<<<<<<< HEAD
 
 <?php
 global $connection;
@@ -34,197 +26,217 @@ if (isset($_GET['id'])) {
 <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4" >
   <div class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl ">
     <div class="relative w-full px-4 pt-14 pb-8 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8 bg-black">
+=======
+<div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
+  <div class="transform text-left text-base transition w-4/5">
+    <div class="relative w-full px-16 pt-14 pb-8 bg-gray-900 rounded-3xl mt-8">
+>>>>>>> 140ee7a84b8d6b2f86b5c81d0b1916f58b0226c4
       <div>
-        <span class="bg-red-600 px-4 py-1 text-white">Movie Detail</span>
+        <span class="bg-red-600 px-4 text-xl py-1 text-white">Movie Detail</span>
       </div>
       <hr class="h-1 mb-8">
-      <div class="flex mb-8">
+      <div class="flex mb-8 justify-between">
         <div class="grid w-full h-full grid-cols-3 sm:grid-cols-6">
-          <div class="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg sm:col-span-6 lg:col-span-4">
-            <img src="<?php echo $item['picture']; ?>" class="object-cover object-center">
+          <div class="text-center aspect-w-2 aspect-h-3 overflow-hidden rounded-lg sm:col-span-4 lg:col-span-5">
+            <img src="<?php echo $item['picture']; ?>" class="object-cover object-center text-center h-full w-full">
           </div>
         </div>
-        <div class="w-3/4 h-full leading-10 flex flex-col text-xl ">
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">TITLE : <span class="text-white">
-                <?php echo $item['title'] ?>
-              </span></p>
+        <div class="w-3/3 h-full leading-10 flex flex-col text-xl">
+          <div class="w-full text-white mb-2 mt-8 flex items-center">
+            <p class="text-white text-xl w-60">TITLE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['title'] ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">LANGUAGE : <span class="text-white text-sm">
-                <?php echo $item['language'] ?>
-              </span></p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">LANGUAGE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['language'] ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">SUBTITLE : <span class="text-white text-sm">
-                <?php echo $item['sub_title']; ?>
-              </span></p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">SUBTITLE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['sub_title']; ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">FORMAT : <span class="text-white text-sm">
-              2D
-              </span></p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">RUNNING TIME</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['duration'] ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">CLASSIFICATION : <span class="text-white text-sm">NC15</span></p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">RELEAST DATE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['releast_date'] ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">RUNNING TIME : <span class="text-white text-sm">
-                <?php echo $item['duration'] ?>
-              </span></p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">START DATE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['start_date'] ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">RELEAST DATE : <span class="text-white text-sm  ">
-              <?php echo $item['releast_date'] ?></span>
-            </p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">END DATE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['end_date'] ?>
+            </span>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">START DATE : <span class="text-white text-sm ">
-              <?php echo $item['start_date'] ?></span>
-            </p>
-          </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">END DATE : <span class="text-white text-sm">
-              <?php echo $item['end_date'] ?></span>
-            </p>
-          </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold">DESCRIPTION : <span class="text-white text-sm">
-              <?php echo $item['description'] ?></span>
-            </p>
+          <div class="w-full text-white mb-2flex items-center">
+            <p class="text-white text-xl">DECRIPTION :</p>
+            <span class="text-gray-400 text-lg hover:text-gray-400">
+              <?php echo $item['description'] ?>
+            </span>
           </div>
         </div>
 
       </div>
+
+
+
+
       <div class="mt-8">
+        <span class="bg-red-600 px-4 py-1 text-white">
+          MeanChey
+        </span>
+        <hr class="h-2 mb-2">
+        <?php foreach($shows as $show){ 
+        if($show['cinema']=="MeanChey"){
+          if (isset($show['date'])){ ?>
+        <p class="text-lg text-white">
+          <?php if (isset($show['hall'])){echo $show['hall']; } ?>
+        </p>
         <div>
-          <span class="bg-red-600 px-4 py-1 text-white">Date Mean Chey</span>
+          <hr class="h-1 mt-1">
+          <div class="flex space-x-4 mt-2 mb-2">
+            <div class="w-1/2 text-white">
+              <p>
+                <?php if (isset($show['date'])){     
+                  $newDate = date("D-M-Y", strtotime($show['date']));             
+                  $date = date("d", strtotime($show['date']));             
+                  echo $date."-".$newDate ;}   ?>
+              </p>
+            </div>
+            <div class="flex gap-4">
+
+              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">
+                <?php if (isset($show['time'])){ echo $show['time']; } ?>
+              </span>
+            </div>
+          </div>
+          <hr class="h-1 mt-1 mb-4">
+
+          <?php }; ?>
+
         </div>
-        <hr class="h-1 mb-1">
-        <p class="text-lg text-white">Hall: Smart 4</p>
-        <div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Wednesday,25 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-gray-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Monday,29 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Monday,29 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-        </div>
+        <?php }; ?>
+        <?php }; ?>
       </div>
+
+
+
       <div class="mt-8">
+        <span class="bg-red-600 px-4 py-1 text-white">
+          Eden
+        </span>
+        <hr class="h-2 mb-2">
+        <?php foreach($shows as $show){ 
+        if($show['cinema']=="Eden"){
+          if (isset($show['date'])){ ?>
+        <p class="text-lg text-white">
+          <?php if (isset($show['hall'])){echo $show['hall']; } ?>
+        </p>
         <div>
-          <span class="bg-red-600 px-4 py-1 text-white">Eden Mall</span>
+          <hr class="h-1 mt-1">
+          <div class="flex space-x-4 mt-2 mb-2">
+            <div class="w-1/2 text-white">
+              <p>
+                <?php if (isset($show['date'])){     
+                  $newDate = date("D-M-Y", strtotime($show['date']));             
+                  $date = date("d", strtotime($show['date']));             
+                  echo $date."-".$newDate ;}   ?>
+              </p>
+            </div>
+            <div class="flex gap-4">
+
+              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">
+                <?php if (isset($show['time'])){ echo $show['time']; } ?>
+              </span>
+            </div>
+          </div>
+          <hr class="h-1 mt-1 mb-4">
+
+          <?php }; ?>
+
         </div>
-        <hr class="h-1 mb-1">
-        <p class="text-lg text-white">Hall: Diamond Class 4</p>
-        <div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Wednesday,25 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-gray-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Monday,29 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Monday,29 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-        </div>
+        <?php }; ?>
+        <?php }; ?>
       </div>
-      <div class="mt-8">
+
+
+
+      <div class="mt-8 mb-8">
+        <span class="bg-red-600 px-4 py-1 text-white">
+          KMall
+        </span>
+        <hr class="h-2 mb-2">
+        <?php foreach($shows as $show){ 
+        if($show['cinema']=="KMall"){
+          if (isset($show['date'])){ ?>
+        <p class="text-lg text-white">
+          <?php if (isset($show['hall'])){echo $show['hall']; } ?>
+        </p>
         <div>
-          <span class="bg-red-600 px-4 py-1 text-white">Date City Mall</span>
+          <hr class="h-1 mt-1">
+          <div class="flex space-x-4 mt-2 mb-2">
+            <div class="w-1/2 text-white">
+              <p>
+                <?php if (isset($show['date'])){     
+                  $newDate = date("D-M-Y", strtotime($show['date']));             
+                  $date = date("d", strtotime($show['date']));             
+                  echo $date."-".$newDate ;}   ?>
+              </p>
+            </div>
+            <div class="flex gap-4">
+
+              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">
+                <?php if (isset($show['time'])){ echo $show['time']; } ?>
+              </span>
+            </div>
+          </div>
+          <hr class="h-1 mt-1 mb-4">
+
+          <?php }; ?>
+
         </div>
-        <hr class="h-1 mb-1">
-        <p class="text-lg text-white">Hall: Gold Class</p>
-        <div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Wednesday,25 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-gray-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Monday,29 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
-            <div class="w-1/2 text-white">
-              <p>Monday,29 January 2023</p>
-            </div>
-            <div class="flex gap-4">
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">09:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">14:05</span>
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">18:45</span>
-            </div>
-          </div>
-          <hr class="h-1 mt-1">
-        </div>
+        <?php }; ?>
+        <?php }; ?>
       </div>
+
+
     </div>
   </div>
 </div>

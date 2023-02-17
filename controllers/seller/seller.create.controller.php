@@ -1,7 +1,8 @@
 <?php
-require "database/database.php";
+// require "database/database.php";
 // require "models/seller/seller.model.php"; 
 require "models/movies/movie.create.model.php";
+require "models/movies/movie.edit.model.php";
 
 
 function validationDate(string $date, $format = 'Y-m-d'): bool
@@ -20,8 +21,13 @@ $startDate = $_POST['startDate'];
 $endDate = $_POST['endDate'];
 $subtitle = $_POST['subtitle'];
 
-$massageEorror = [];
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+print_r($title.'<br>'. $description.'<br>'. $language.'<br>'. $duration.'<br>'. $picture.'<br>'. $startDate.'<br>'. $endDate.'<br>'. $subtitle.'<br>'. $id);
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+}
+if(empty($id)){
+    // print_r($_SERVER);
+    $massageEorror = [];
 
     // validation 
 
@@ -40,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($duration)){
         $massageEorror['duration'] = "Please enter a duration";
     }
-    
+
     if(empty($picture)){
         $massageEorror['picture'] = "Please enter a picture";
     }
@@ -77,11 +83,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $massageEorror['subtitle'] = "Please enter a subtitle";
     }  
 
+
+    //  insert data to database 
+    if (empty($massageEorror['title']) && empty($massageEorror['subtitle']) && empty($massageEorror['endDate']) && empty($massageEorror['startDate']) && empty($massageEorror['releastDate']) && empty($massageEorror['picture'])  && empty($massageEorror['duration'])){
+
+        createMovie($title , $description , $language , $releastDate, $duration ,$picture ,$startDate, $endDate, $subtitle);
+        header("Location:/seller");
+    }
+    require "views/seller/seller.form.view.php";
 }
-//  insert data to database 
-if (empty($massageEorror['title']) && empty($massageEorror['subtitle']) && empty($massageEorror['endDate']) && empty($massageEorror['startDate']) && empty($massageEorror['releastDate']) && empty($massageEorror['picture'])  && empty($massageEorror['duration'])){
-   
-    createMovie($title , $description , $language , $releastDate, $duration ,$picture ,$startDate, $endDate, $subtitle);
-    header("Location: /seller");
+else {
+    updateMovie($title, $description, $language,$releastDate, $duration, $picture, $startDate, $endDate, $subtitle, $id);
+    header("Location:/seller");
 }
-require "views/seller/seller.form.view.php";
+

@@ -15,7 +15,7 @@
         ]);
         return $statement->rowCount() > 0;
     }
-    function updateMovie(string $title, string $description, string $language , string $releastDate, string $duration , string $picture, int $movie_id)
+    function updateMovie(string $title, string $description, string $language , string $releastDate, string $duration , string $picture, int $movie_id) :bool
     {
         global $connection;
         $statement = $connection->prepare("UPDATE movies SET title=:title, description=:description,language=:language, release_date=:release_date, duration=:duration,picture=:picture WHERE movie_id=:movie_id");
@@ -26,10 +26,10 @@
             ':release_date' => $releastDate,
             ':duration' => $duration,
             ':picture' => $picture,
-            ':movie_id' => $movie_id
+            ':movie_id' => $movie_id 
 
         ]);
-
+        return $statement->rowCount() > 0;
     }
     
 

@@ -1,24 +1,26 @@
 <?php 
+// echo updateMovie();
 require "views/partials/head.php";
 // require "views/partials/nav.php";
 require "models/movie.model.php";
-
 
 $id = '';
 $item = '';
 $action='/create';
 $label = 'Create';
+$update = 'CREATE MOVIE';
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
   $action='/create'.'?id='.$id;
   $label = "Update";
+  $update = 'UPDATE MOVIE';
   $item = getMovieItem($id);
 }
 
 ?>
 <div class="mx-96 pt-8">
-    <form action="/create" class="bg-black shadow-md rounded-xl px-12 pt-6 pb-8 mb-4" method="post">
-        <p class="text-center text-white text-3xl font-bold pb-4">CREATE MOVIE</p>
+    <form action="<?php echo $action;?>" class="bg-black shadow-md rounded-xl px-12 pt-6 pb-8 mb-4" method="post">
+        <p class="text-center text-white text-3xl font-bold pb-4"><?php echo $update ?></p>
         <div class="">
                 <label class="block text-white" for="title">Movie Title</label>
                 <input
@@ -35,14 +37,13 @@ if (isset($_GET['id'])) {
             </div>
         
         <div class="">
-            <label class="block text-white" for="description">Description</label>
-            <input
-                class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline"
-                type="text" placeholder="Description" name="description"
-                value="<?php echo ($item?$item['description']:$item)?>">
-            <span class="<?php echo isset($massageEorror['description'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['description'])? $massageEorror['description']:"."?></span>
-        </div>
+            <label class="block text-white" for="description"></label>
 
+        </div>
+        <textarea name="description" id="" cols="30" rows="10"  class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline" type="text" placeholder="Description" name="description">
+            <?php echo ($item?$item['description']:$item)  ?> 
+        </textarea>
+        <span class="<?php echo isset($massageEorror['description'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['description'])? $massageEorror['description']:"."?></span>
         <div class="flex items-center justify-between">
         <div class="w-6/12">
             <label class="block text-white" for="language" name="language">Choose a language:</label>
@@ -69,7 +70,7 @@ if (isset($_GET['id'])) {
                 <input datepicker type="text"
                     class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="date" name="releastDate"
-                    value="<?php echo ($item?$item['releast_date']:$item)?>">
+                    value="<?php echo ($item?$item['release_date']:$item)?>">
             </div>
             <span class="<?php echo isset($massageEorror['releastDate'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['releastDate'])? $massageEorror['releastDate']:"."?></span>
         </div>
