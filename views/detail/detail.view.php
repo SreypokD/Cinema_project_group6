@@ -25,7 +25,6 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<!-- add -->
 <?php
   if(isset($_POST['name'])) {
     $total = $_POST['name'];
@@ -74,7 +73,7 @@ if (isset($_GET['id'])) {
               </span></p>
           </div>
           <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">RELEAST DATE : <span class="text-white text-sm  ">
+            <p class = "text-red-500 font-bold ">RELEASE DATE : <span class="text-white text-sm  ">
               <?php echo $item['release_date'] ?></span>
             </p>
           </div>
