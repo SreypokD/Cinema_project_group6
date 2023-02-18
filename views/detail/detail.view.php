@@ -1,4 +1,3 @@
-Sreypok Doem WEP 2023 A, [2/18/2023 5:16 PM]
 <?php 
 session_start();
 require "views/partials/head.php";
