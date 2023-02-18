@@ -118,7 +118,7 @@ require "views/partials/nav.php";
             </div>
             <div class="flex gap-4">
 
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">
+              <span class="movieTime bg-red-600 p-1 rounded text-white cursor-pointer">
                 <?php if (isset($show['time'])){ echo $show['time']; } ?>
               </span>
             </div>
@@ -158,7 +158,7 @@ require "views/partials/nav.php";
             </div>
             <div class="flex gap-4">
 
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">
+              <span class="movieTime1 bg-red-600 p-1 rounded text-white cursor-pointer">
                 <?php if (isset($show['time'])){ echo $show['time']; } ?>
               </span>
             </div>
@@ -187,7 +187,7 @@ require "views/partials/nav.php";
         </p>
         <div>
           <hr class="h-1 mt-1">
-          <div class="flex space-x-4 mt-2 mb-2">
+          <div class=" flex space-x-4 mt-2 mb-2">
             <div class="w-1/2 text-white">
               <p>
                 <?php if (isset($show['date'])){     
@@ -198,7 +198,8 @@ require "views/partials/nav.php";
             </div>
             <div class="flex gap-4">
 
-              <span class="bg-red-600 p-1 rounded text-white cursor-pointer">
+              <span class="movieTime3 bg-red-600 p-1 rounded text-white cursor-pointer">
+
                 <?php if (isset($show['time'])){ echo $show['time']; } ?>
               </span>
             </div>
@@ -237,17 +238,27 @@ require "views/partials/nav.php";
                 CONFIRM PURCHASE
                 </h5>
             </div>
+      <?php
+      global $connection;
+
+      $listShow = listShow();
+      if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $item = getMovieId($id);
+      }
+      ?>
+
         <div class="flex justify-between p-5">
           <div class="flex  flex-col justify-center mt-2">
-            <p class = "hover:underline"> <strong class ="text-red-500 ">Title :</strong> AVATA EP 2</p>
-            <p class = "hover:underline"><strong class ="text-red-500">Ticket Name:</strong> Ticket 11</p> 
-            <p class = "hover:underline"><strong class ="text-red-500">Release date:</strong> 02/03/2023</p>                                                                                                                                                         
-            <p class = "hover:underline"><strong class ="text-red-500">Seat:</strong> 2F </p>                                                                                                                                                         
-            <p class = "hover:underline"><strong class ="text-red-500">Hall:</strong> Hall 1</p>                                                                                                                                                         
-            <p class = "hover:underline"><strong class ="text-red-500">Time:</strong> 9:30 | 11:45 </p>                                                                                                                                                         
+            <p class = "hover:underline"> <strong class ="text-red-500 ">Title : </strong> <?php echo $item['title'] ?></p>
+            <p class = "hover:underline"><strong class ="text-red-500">Ticket Name : </strong> Ticket 11</p> 
+            <p class = "hover:underline"><strong class ="text-red-500">Release date : </strong> <?php echo $item['release_date'] ?></p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Seat : </strong> 2F </p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Hall : </strong><?php echo $item['hall'] ?></p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Time : </strong> <span class = "time"></span></p>                                                                                                                                                         
           </div>
           <div class="w-36">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdNRsO-rmo5fnVt0u1FwojBzK8krwrTYyPuA&usqp=CAU" >
+            <img src="<?php echo $item['picture'] ?>" >
           </div>
         </div>
         <div class="flex justify-between mx-3 ">
