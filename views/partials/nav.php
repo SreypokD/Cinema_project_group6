@@ -149,9 +149,6 @@
 		<?php } ?>
 	</div>
 	</div>
-<<<<<<< HEAD
-</nav>
-=======
 </nav>
 <div id="cardShow" class="hidden flex fixed justify-center top-52 mr-16 items-center top-0 left-0  w-full">
 	<div class=" bg-gray-800 border-r-4 border-t-4 border-white flex flex-col justify-center w-1/4 h-96 p-6 shadow-md rounded-xl sm:px-12 dark:text-gray-100 modal-dialog modal-dialog-scrollable relative">
@@ -172,4 +169,3 @@
 
 </div>
 <script src='views/js/profile.js'></script>
->>>>>>> 98f29e462f91c41e9b856facc598be78b3bf2d46
