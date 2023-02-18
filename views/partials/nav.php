@@ -82,7 +82,7 @@
 				</a>
 
 				<a class="<?= urlIs('/ticket') ? 'border-white border-y-2' : '' ?> flex items-center space-x-2"
-					href="#">
+					href="/ticket">
 					<span>
 						<svg xmlns="http://www.w3.org/2000/svg"
 							class="<?= urlIs('/ticket') ? 'font-bold text-white' : 'text-red-500 font-bold' ?> h-6 w-6"
