@@ -45,11 +45,11 @@ require "models/detail.model.php";
             <label class="block text-white" for="hall" name="hall">Choose hall:</label>
             <select name="hall" id="hall"
                 class="text-white bg-gray-800 w-full py-3 px-3 border border-gray-500 rounded-xl" value="<?php echo isset($_POST['language'])? $_POST['language']:""?>">
-                <option value="hall01" checked name="">Hall 01</option>
-                <option value="hall04" name="">Hall 02</option>
-                <option value="hall03" name="">Hall 03</option>
-                <option value="hall04" name="">Hall 04</option>
-                <option value="hall05" name="">Hall 05</option>
+                <option value="Hall01" checked name="">Hall 01</option>
+                <option value="Hall04" name="">Hall 02</option>
+                <option value="Hall03" name="">Hall 03</option>
+                <option value="Hall04" name="">Hall 04</option>
+                <option value="Hall05" name="">Hall 05</option>
             </select>
         </div>
         </div>
