@@ -5,7 +5,7 @@
     function createMovie(string $title, string $description, string $language , string $releastDate, string $duration , string $picture ,string $startDate, string $endDate , string $subtitle) : bool
     {
         global $connection;
-        $statement = $connection->prepare("INSERT INTO movies(title, description,language, releast_date, duration,picture ,start_date,end_date,sub_title) VALUES (:title, :description,:language,:releastDate,:duration,:picture ,:start_date,:end_date,:subtitle)");
+        $statement = $connection->prepare("INSERT INTO movies(title, description,language, release_date, duration,picture ,start_date,end_date,sub_title) VALUES (:title, :description,:language,:releastDate,:duration,:picture ,:start_date,:end_date,:subtitle)");
         $statement->execute([
             ':title' => $title,
             ':description' => $description,

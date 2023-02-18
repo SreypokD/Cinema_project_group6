@@ -5,6 +5,7 @@
  require "views/partials/nav.php";
  require "database/database.php";
  require "models/movie.model.php";
+
 //  require "models/movies/movie.edit.model.php";
 
 ?>

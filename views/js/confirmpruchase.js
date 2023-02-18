@@ -33,5 +33,20 @@ hideModalNew.addEventListener('click', function()
     modalNew.classList.add('hidden');
 });
 
+function muliply(){
+    var numberOfTicket = document.getElementById('ticketNumber').value;
+    var price = 3.5;
+    var cerrency = "$";
+    var totalPrice = cerrency + price * numberOfTicket ;
+    document.getElementById('total').value = totalPrice;
+    }
+        
+muliply()
+
+   
+
+
+       
+
 
 
