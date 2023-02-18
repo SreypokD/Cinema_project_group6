@@ -34,8 +34,6 @@ session_start();
                 <p class = "hover:text-gray-400"><strong class ="text-red-500">End date :</strong> <?php echo $movie['end_date']; ?></p>                                                                                                                                                         
                 <p class = "hover:text-gray-400"><strong class ="text-red-500">Show Date: </strong></p>   
                 <?php $shows = getShowById($movie['movie_id']);
-                    // print_r ($show);
-                    // echo $movie['movie_id'];
                 foreach ($shows as $show){?>
                     <div class="flex">
                         <p class = "bg-gray-500 p-1 rounded-xl m-1"><?php echo $show['date'] ?></p>
