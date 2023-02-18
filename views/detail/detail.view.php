@@ -222,7 +222,7 @@ require "views/partials/nav.php";
       </div>
     </div>
 
-Sreypok Doem WEP 2023 A, [2/18/2023 5:16 PM]
+
 <!-- Modal -->
     <div class="modal fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto"
         id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
@@ -251,11 +251,10 @@ Sreypok Doem WEP 2023 A, [2/18/2023 5:16 PM]
         <div class="flex justify-between mx-3 ">
           <div class="flex justify-center p-2">
             <p class = "hover:underline"><strong class ="text-red-500">Ticket :</strong></p> 
-            <input type="number" class= " ml-2 w-12 bg-red-500 text-white outline-none ">
+            <input type="number" name="ticketNumber" id="ticketNumber" onchange="multiply();" class= " ml-2 w-12 border-2 border-slate-900 outline-none ">
           </div>
-          <div class="flex justify-center p-2">
-            <p class = "hover:underline"><strong class ="text-red-500">Total :</strong> $00</p> 
-            
+          <div class="flex justify-center p-2">           
+            <div>Total price : <input type="text" name="total" id="total" class="bg-red-500 w-14 text-center"></div>
           </div>
         </div>
         <div
@@ -274,7 +273,7 @@ Sreypok Doem WEP 2023 A, [2/18/2023 5:16 PM]
     </div>
 </div>
 
-Sreypok Doem WEP 2023 A, [2/18/2023 5:16 PM]
+
 <!-- payment on movie -->
 <div class="modalNew fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto"
         id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">

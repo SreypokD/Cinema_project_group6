@@ -33,7 +33,7 @@ hideModalNew.addEventListener('click', function()
     modalNew.classList.add('hidden');
 });
 
-function muliply(){
+function multiply(){
     var numberOfTicket = document.getElementById('ticketNumber').value;
     var price = 3.5;
     var cerrency = "$";
@@ -41,7 +41,7 @@ function muliply(){
     document.getElementById('total').value = totalPrice;
     }
         
-muliply()
+multiply()
 
    
 
