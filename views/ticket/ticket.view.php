@@ -1,4 +1,7 @@
-<?php require "views/partials/head.php" ?>
+<?php 
+require "views/partials/head.php" ;
+session_start();
+?>
 <?php require "views/partials/nav.php" ?>
 
 <!-- component -->

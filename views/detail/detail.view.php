@@ -72,10 +72,14 @@ if (isset($_GET['id'])) {
                 <?php echo $item['duration'] ?>
               </span></p>
           </div>
-          <div class="w-full text-white">
-            <p class = "text-red-500 font-bold ">RELEASE DATE : <span class="text-white text-sm  ">
-              <?php echo $item['release_date'] ?></span>
-            </p>
+          <div class="w-full text-white mb-2 flex items-center">
+            <p class="text-white text-xl w-60">RELEAST DATE</p>
+            <span class="text-white hover:text-gray-400 w-20">
+              :
+            </span>
+            <span class="text-white text-lg hover:text-gray-400">
+              <?php echo $item['releast_date'] ?>
+            </span>
           </div>
           <div class="w-full text-white">
             <p class = "text-red-500 font-bold ">START DATE : <span class="text-white text-sm ">
@@ -227,6 +231,7 @@ if (isset($_GET['id'])) {
     </div>
   </div>
 </div>
+<?php if (isset($_SESSION['email']) && $_SESSION['user_type'] == "user") { ?>
 <!-- confirm pruchase  -->
     <div class="flex justify-end mr-48">
         <button id="button-card"
@@ -236,7 +241,7 @@ if (isset($_GET['id'])) {
     </div>
 
     <!-- Modal -->
-    <div class="modal fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto "
+    <div class="modal fixed top-0 left-0  w-full h-full hidden outline-none overflow-x-hidden overflow-y-auto"
         id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable relative w-7/12 pointer-events-none m-auto mt-5 ">
             <div
@@ -339,7 +344,7 @@ if (isset($_GET['id'])) {
         </div>
     </div>
 </div>
-
+<?php } ?>
 
 <script src='views/js/confirmpruchase.js'></script>
 

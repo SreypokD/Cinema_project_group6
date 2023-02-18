@@ -2,6 +2,33 @@
 //database
 require "database/database.php";
 
+<<<<<<< HEAD
+=======
+
+function getMovieItem(int $id)
+{
+    global $connection;
+    $statement = $connection->prepare("SELECT * FROM movies  WHERE movie_id= :id");
+    $statement->execute([':id' => $id]);
+    return $statement->fetch();
+}
+// function getMovieItem(int $id)
+// {
+//     global $connection;
+//     $statement = $connection->prepare("SELECT * FROM shows INNER JOIN movies ON shows.movie_id = movies.movie_id  WHERE shows.movie_id= :id");
+//     $statement->execute([':id' => $id]);
+//     return $statement->fetch();
+// }
+
+function getShow(int $id)
+{
+    global $connection;
+    $statement = $connection->prepare("SELECT * FROM shows  WHERE movie_id= :id");
+    $statement->execute([':id' => $id]);
+    return $statement->fetchAll();
+}
+
+>>>>>>> 98f29e462f91c41e9b856facc598be78b3bf2d46
 function listShow() : array
 {
     global $connection;

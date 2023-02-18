@@ -26,18 +26,22 @@ require 'models/users.model.php';
                 $is_password = password_verify($password, $user['password']);
                 if ($email == $user["email"] && ($is_password || $password == $user['password'])){
                     $_SESSION['email'] = $user["email"];
+                    $_SESSION['name'] = $user["first_name"].$user["last_name"];
                     $_SESSION['password'] = $user["password"];
                     
                     if($user["user_type"] == 'admin'|| $user["user_type"] == 'user'){
                         $_SESSION['user_type'] = $user["user_type"];
                     }else{
-                        $_SESSION['user_type'] = "";
+                        $_SESSION['user_type'] = "seller";
                     }
-                    // header('Location:/');
-                    if ($user["user_type"] == 'admin' || $user["user_type"] == 'user'){
-                        header('location:/');
-                    }else{
-                        header('location:/seller');
+                    if ($user["user_type"] == 'user'){
+                        header('location:/?id='.$user['user_id']);
+                    }else if($user["user_type"] == 'admin'){
+                        header('location:/movie');;
+                    }
+                    else{
+                        print_r ($user);
+                        header('location:/seller?id='.$user['user_id']);
                     }
                 }
                 else if(!($is_password)){

@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
   deleteMovie($id);
 }
 
-if ($user["user_type"] == 'admin'){
+if ($_SESSION["user_type"] == 'admin'){
   header('location:/movie');
 }else{
   header('location:/seller');
