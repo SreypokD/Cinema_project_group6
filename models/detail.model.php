@@ -17,7 +17,6 @@ function getsMovieId(int $id)
     $statement->execute([':id' => $id]);
     return $statement->fetch();
 }
-
 function getShow(int $id)
 {
     global $connection;
@@ -25,7 +24,6 @@ function getShow(int $id)
     $statement->execute([':id' => $id]);
     return $statement->fetchAll();
 }
-
 function listShow() : array
 {
     global $connection;
@@ -33,3 +31,4 @@ function listShow() : array
     $statement->execute();
     return $statement->fetchAll();
 }
+

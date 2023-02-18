@@ -34,3 +34,4 @@
         $statement -> execute([':id' => $id]);
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
+    
