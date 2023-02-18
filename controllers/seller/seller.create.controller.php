@@ -92,8 +92,9 @@ if(empty($id)){
     }
     require "views/seller/seller.form.view.php";
 }
-else {
-    updateMovie($title, $description, $language,$releastDate, $duration, $picture, $startDate, $endDate, $subtitle, $id);
-    header("Location:/seller");
+else if ($_POST['update'] === 'update') 
+{
+  updateMovie($title, $description, $language,$releastDate, $duration, $picture, $startDate, $endDate, $subtitle, $id);
+  header("Location:/seller");
 }
 

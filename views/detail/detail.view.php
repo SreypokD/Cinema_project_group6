@@ -68,7 +68,7 @@ if (isset($_GET['id'])) {
           </div>
           <div class="w-full text-white">
             <p class = "text-red-500 font-bold ">RELEAST DATE : <span class="text-white text-sm  ">
-              <?php echo $item['releast_date'] ?></span>
+              <?php echo $item['release_date'] ?></span>
             </p>
           </div>
           <div class="w-full text-white">
