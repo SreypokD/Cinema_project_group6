@@ -1,6 +1,6 @@
 <?php
 require "database/database.php";
-// require "models/show.model.php";
+require "models/show.model.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

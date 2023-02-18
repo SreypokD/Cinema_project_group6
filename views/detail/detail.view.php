@@ -60,7 +60,7 @@ require "views/partials/nav.php";
               :
             </span>
             <span class="text-white text-lg hover:text-gray-400">
-              <?php echo $item['releast_date'] ?>
+              <?php echo $item['release_date'] ?>
             </span>
           </div>
           <div class="w-full text-white mb-2 flex items-center">
@@ -216,7 +216,7 @@ require "views/partials/nav.php";
     </div>
   </div>
 </div>
-<?php if ($_SESSION['user_type'] == "user") { ?>
+<?php if (isset($_SESSION['email']) && $_SESSION['user_type'] == "user") { ?>
 <!-- confirm pruchase  -->
     <div class="flex justify-end mr-48">
         <button id="button-card"

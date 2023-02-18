@@ -1,36 +1,21 @@
 <?php 
 require "views/partials/head.php";
-require "models/movie.model.php";
-
-$id = '';
-$item = '';
-$action='/create';
-$label = 'Create';
-$update = 'CREATE MOVIE';
-if (isset($_GET['id'])) {
-  $id = $_GET['id'];
-  $action='/create'.'?id='.$id;
-  $label = "Update";
-  $update = 'UPDATE MOVIE';
-  $item = getMovieItem($id);
-}
-
 ?>
 <div class="mx-80 pt-8">
-    <form action="<?php echo $action;?>" class="bg-black shadow-md rounded-xl px-12 pt-6 pb-8 mb-4" method="post">
-        <p class="text-center text-white text-3xl font-bold pb-4"><?php echo $update ?></p>
+    <form action="/create" class="bg-black shadow-md rounded-xl px-12 pt-6 pb-8 mb-4" method="post">
+        <p class="text-center text-white text-3xl font-bold pb-4">CREATE MOVIE</p>
         <div class="">
                 <label class="block text-white" for="title">Movie Title</label>
                 <input
                     class="shadow text-white bg-gray-800 appearance-none border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline"
-                    type="text" placeholder="Movie Title " name="title" value="<?php echo ($item?$item['title']:$item) ?>">
+                    type="text" placeholder="Movie Title " name="title" value="<?php echo isset($_POST['title'])? $_POST['title'] : "" ?>">
                 <span class="<?php echo isset($massageEorror['title'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['title'])? $massageEorror['title']:"."?></span>
             </div>
         <div class="">
                 <label class="block text-white" for="title">Duration</label>
                 <input
                     class="shadow text-white bg-gray-800 appearance-none border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline"
-                    type="text" placeholder="00 : 00 : 00" name="duration" value="<?php echo ($item?$item['duration']:$item) ?>">
+                    type="text" placeholder="00 : 00 : 00" name="duration" value="<?php echo isset($_POST['duration'])? $_POST['duration'] : "" ?>">
                 <span class="<?php echo isset($massageEorror['duration'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['duration'])? $massageEorror['duration']:"."?></span>
             </div>
         
@@ -38,7 +23,7 @@ if (isset($_GET['id'])) {
             <label class="block text-white" for="description"></label>
 
         </div>
-        <textarea name="description" id="" cols="30" rows="10"  class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white" type="text" placeholder="Description" name="description"><?php echo ($item?$item['description']:$item)?></textarea>
+        <textarea name="description" id="" cols="30" rows="10"  class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline" type="text" placeholder="Description" name="description"><?php echo isset($_POST['description'])? $_POST['description'] : "" ?></textarea>
         <span class="<?php echo isset($massageEorror['description'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['description'])? $massageEorror['description']:"."?></span>
         <div class="flex items-center justify-between">
         <div class="w-6/12">
@@ -66,7 +51,7 @@ if (isset($_GET['id'])) {
                 <input datepicker type="text"
                     class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="date" name="releastDate"
-                    value="<?php echo ($item?$item['release_date']:$item)?>">
+                    value="<?php echo isset($_POST['releastDate'])? $_POST['releastDate'] : "" ?>">
             </div>
             <span class="<?php echo isset($massageEorror['releastDate'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['releastDate'])? $massageEorror['releastDate']:"."?></span>
         </div>
@@ -75,7 +60,7 @@ if (isset($_GET['id'])) {
             <label class="block text-white" for="picture">Image</label>
             <input
                 class="shadow appearance-none bg-gray-800 border border-gray-500 rounded-xl w-full py-3 px-3 text-white leading-tight focus:shadow-outline"
-                type="text" placeholder="Image URL" name="picture" value="<?php echo ($item?$item['picture']:$item)?>">
+                type="text" placeholder="Image URL" name="picture" value="<?php echo isset($_POST['picture'])? $_POST['picture'] : "" ?>">
             <span class="<?php echo isset($massageEorror['picture'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['picture'])? $massageEorror['picture']:"."?></span>
         </div>
         <div class="flex items-center justify-between">
@@ -93,7 +78,7 @@ if (isset($_GET['id'])) {
                 <input datepicker type="text"
                     class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="startDate" name="startDate"
-                    value="<?php echo ($item?$item['start_date']:$item)?>">
+                    value="<?php echo isset($_POST['startDate'])? $_POST['startDate'] : "" ?>">
             </div>
             <span class="<?php echo isset($massageEorror['startDate'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['startDate'])? $massageEorror['startDate']:"."?></span>
         </div>
@@ -111,7 +96,7 @@ if (isset($_GET['id'])) {
                 <input datepicker type="text"
                     class="w-full bg-gray-800 border border-gray-500 text-white text-sm py-3 rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Select date" id="endDate " name="endDate"
-                    value="<?php echo ($item?$item['end_date']:$item)?>">
+                    value="<?php echo isset($_POST['endDate'])? $_POST['endDate'] : "" ?>">
             </div>
             <span class="<?php echo isset($massageEorror['endDate'])? "text-red-600 pl-2":"text-black"?>"><?php echo isset($massageEorror['endDate'])? $massageEorror['endDate']:"."?></span>
         </div>
@@ -140,7 +125,7 @@ if (isset($_GET['id'])) {
                 <button
                     class="ront-bold mx-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-12 rounded-xl focus:shadow-outline"
                     type="submit" name="create">
-                    <?php echo $label?>
+                    Create
                 </button>
             </div>
     </form>
