@@ -4,14 +4,14 @@ require "models/movie.model.php";
 
 $id = '';
 $item = '';
-$action='/create';
+// $action='/create';
 $label = 'Create';
-$update = 'CREATE MOVIE';
+// $update = 'CREATE MOVIE';
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-  $action='/create'.'?id='.$id;
-  $label = "Update";
-  $update = 'UPDATE MOVIE';
+//   $action='/create'.'?id='.$id;
+//   $label = "Update"; 
+//   $update = "UPDATE MOVIE";
   $item = getMovieItem($id);
 }
 

@@ -1,5 +1,6 @@
 <?php 
  require "database/database.php";
+
 function updateMovie(string $title, string $description, string $language , string $releastDate, string $duration , string $picture, string $start_date, string $end_date,string $sub_title, int $movie_id) :bool
 {
     global $connection;

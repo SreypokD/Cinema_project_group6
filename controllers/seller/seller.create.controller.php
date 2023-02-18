@@ -89,6 +89,12 @@ if(empty($id)){
     }
     require "views/seller/seller.create.form.view.php";
 }
+<<<<<<< HEAD
+else if ($_POST['update'] === 'update') 
+{
+  updateMovie($title, $description, $language,$releastDate, $duration, $picture, $startDate, $endDate, $subtitle, $id);
+  header("Location:/seller");
+=======
 else {
     $massageEorror = [];
 
@@ -151,5 +157,6 @@ else {
         header("Location:/seller");
     }
     require "views/seller/seller.form.view.php";
+>>>>>>> 98f29e462f91c41e9b856facc598be78b3bf2d46
 }
 

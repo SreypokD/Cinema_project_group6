@@ -18,7 +18,7 @@ session_start();
 				transform: translateX(-90px);
 			}
 		</style>
-		<div class="flex flex-col w-full">
+		<div class="flex w-full">
 			<div class="bg-white relative drop-shadow-2xl  rounded-3xl p-4 m-8 w-80 h-1/4">
 				<div class="flex-none sm:flex">
 					<div class=" relative h-32 w-32   sm:mb-0 mb-3 hidden">

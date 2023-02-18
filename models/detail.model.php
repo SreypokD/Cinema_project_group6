@@ -2,6 +2,8 @@
 //database
 require "database/database.php";
 
+<<<<<<< HEAD
+=======
 
 function getMovieItem(int $id)
 {
@@ -26,6 +28,7 @@ function getShow(int $id)
     return $statement->fetchAll();
 }
 
+>>>>>>> 98f29e462f91c41e9b856facc598be78b3bf2d46
 function listShow() : array
 {
     global $connection;
@@ -33,3 +36,4 @@ function listShow() : array
     $statement->execute();
     return $statement->fetchAll();
 }
+

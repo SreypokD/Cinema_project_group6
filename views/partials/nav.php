@@ -4,9 +4,9 @@
 		<a class="text-3xl font-bold font-heading" href="/">
 			DATE MOVIE.
 		</a>
-		<div class="hidden xl:flex items-center space-x-5" >
-		<?php if(isset($_SESSION['email']) && $_SESSION['user_type'] == "user"){ ?>
-			<a class="flex items-center hover:text-gray-200" href="#">
+		<div class="hidden xl:flex items-center space-x-5">
+		<?php if(isset($_SESSION['email']) && ($_SESSION['user_type'] == "admin" || $_SESSION['user_type'] == "user")){ ?>
+			<a class="flex items-center hover:text-gray-200" href="/ticket">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -149,6 +149,9 @@
 		<?php } ?>
 	</div>
 	</div>
+<<<<<<< HEAD
+</nav>
+=======
 </nav>
 <div id="cardShow" class="hidden flex fixed justify-center top-52 mr-16 items-center top-0 left-0  w-full">
 	<div class=" bg-gray-800 border-r-4 border-t-4 border-white flex flex-col justify-center w-1/4 h-96 p-6 shadow-md rounded-xl sm:px-12 dark:text-gray-100 modal-dialog modal-dialog-scrollable relative">
@@ -169,3 +172,4 @@
 
 </div>
 <script src='views/js/profile.js'></script>
+>>>>>>> 98f29e462f91c41e9b856facc598be78b3bf2d46
