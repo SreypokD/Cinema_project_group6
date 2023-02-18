@@ -244,7 +244,7 @@ require "views/partials/nav.php";
       $listShow = listShow();
       if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $item = getMovieId($id);
+        $item = getsMovieItem($id);
       }
       ?>
 
@@ -258,6 +258,7 @@ require "views/partials/nav.php";
             <p class = "hover:underline"><strong class ="text-red-500">Time : </strong> <span class = "time"></span></p>                                                                                                                                                         
           </div>
           <div class="w-36">
+
             <img src="<?php echo $item['picture'] ?>" >
           </div>
         </div>

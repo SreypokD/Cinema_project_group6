@@ -10,7 +10,7 @@ function getMovieItem(int $id)
     $statement->execute([':id' => $id]);
     return $statement->fetch();
 }
-function getMovieId(int $id)
+function getsMovieId(int $id)
 {
     global $connection;
     $statement = $connection->prepare("SELECT * FROM shows INNER JOIN movies ON shows.movie_id = movies.movie_id  WHERE shows.movie_id= :id");
