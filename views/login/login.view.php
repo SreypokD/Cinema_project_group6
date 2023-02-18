@@ -60,7 +60,7 @@
       </div>
   </div>
   <p class="text-sm font-light text-white">
-    Don’t have an account yet? <a href="/register"
+    Don't have an account yet? <a href="/register"
       class="font-medium font-bold text-red-600 hover:underline dark:text-primary-500">Sign up</a>
   </p>
 

@@ -13,6 +13,7 @@
     <script src="../path/to/flowbite/dist/datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/datepicker.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="shortcut icon" href="asset/image/logo_black.png" type="image/x-icon">
     
 </head>
 <body class="bg-gradient-to-r from-black via-red-600 to-black min-h-screen">
