@@ -8,12 +8,6 @@
         return $statement->fetch();
 
     }
-    // function getStartDate(int $id){
-    //     global $connection;
-    //     $statement = $connection->prepare("SELECT releast_date FROM movies WHERE movie_id= :id");
-    //     $statement->execute([':id' => $id]);
-    //     return $statement->fetch();
-    // }
     function createShow(string $format, string $cinema, string $hall, string $time, int $id, string $date){
 
         global $connection;
@@ -28,9 +22,15 @@
         ]);
         return $statement->rowCount() > 0;
     }
-    function getShow(){
+    function getShows(){
         global $connection;
         $statement = $connection -> prepare('SELECT * FROM shows');
         $statement -> execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    function getShowById($id){
+        global $connection;
+        $statement = $connection -> prepare('SELECT * FROM shows WHERE movie_id = :id');
+        $statement -> execute([':id' => $id]);
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }

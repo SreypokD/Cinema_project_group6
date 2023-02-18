@@ -1,6 +1,6 @@
 <?php
 require "database/database.php";
-require "models/show.model.php";
+// require "models/show.model.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($formate <= date("Y-m-d")){
             $errors['date'] = "Your date must be in future";
         }else{
-        $shows = getShow();
+        $shows = getShows();
         foreach($shows as $show){
             if ($show['format'] == $screen && $show['cinema'] == $cinema && $show['time'] == $time && $show['hall'] == $hall){
                 $errors['show'] = "It have all ready show";

@@ -1,7 +1,7 @@
 <?php session_start();
 require "views/partials/head.php";
 require "views/partials/nav.php";
-if(empty($_SESSION['user_type'])){
+if(empty($_SESSION['user_type']) || $_SESSION['user_type'] == 'user'){
   require "views/partials/banner.php";
 };
 require "database/database.php" ?>
@@ -34,12 +34,21 @@ require "database/database.php" ?>
                             <?php if(empty($_SESSION['user_type'])){echo "See More";}else {if($_SESSION['user_type'] == "admin"){echo "Product Detail";}else{echo "See More";};} ?>
                         </button>
                     </a>
-                    <a href="<?php if ($_SESSION["user_type"] == 'admin'){echo "/delete?id=".$movie['movie_id'];}else{ echo "/ticket";} ?>">
+                    <?php if(empty($_SESSION['email']) || $_SESSION['user_type']=='user'){ ?>
+                    <a href="/detail?id=<?php echo $movie['movie_id']?>">
                         <button id="button-card"
                             class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">
-                            <?php if(empty($_SESSION['user_type'])){echo "Buy Now";}else {if($_SESSION['user_type'] == "admin"){echo "Delete Product";}else{echo "Buy Now";};} ?>
+                            Buy Now
                         </button>
                     </a>
+                    <?php ;} else{?>
+                        <a href="/delete?id=<?php echo $movie['movie_id']?>">
+                        <button id="button-card"
+                            class="text-white p-2 border-red-600 border-2 text-white text-sm w-30 mt-5 rounded-md hover:bg-red-600 transition-all">
+                            Delete Product
+                        </button>
+                    </a>
+                    <?php ;} ?>
                 </div>
             </div>
         </div>

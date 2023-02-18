@@ -151,7 +151,7 @@
 	</div>
 </nav>
 <div id="cardShow" class="hidden flex fixed justify-center top-52 mr-16 items-center top-0 left-0  w-full">
-	<div class=" bg-gray-800 border-r-4 border-t-4 border-white flex flex-col justify-center w-1/4 h-96 p-6 shadow-md rounded-xl sm:px-12 dark:text-gray-100 modal-dialog modal-dialog-scrollable relative pointer-events-none">
+	<div class=" bg-gray-800 border-r-4 border-t-4 border-white flex flex-col justify-center w-1/4 h-96 p-6 shadow-md rounded-xl sm:px-12 dark:text-gray-100 modal-dialog modal-dialog-scrollable relative">
 		<img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
 		<div class="space-y-4 text-center divide-y divide-gray-700">
 			<div class="my-2 space-y-1">

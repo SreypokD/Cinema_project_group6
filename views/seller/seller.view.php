@@ -2,8 +2,8 @@
 session_start();
  require "views/partials/head.php";
  require "views/partials/nav.php";
- require "database/database.php";
  require "models/movie.model.php";
+ require "models/show.model.php";
 ?>
 <div class="m-8 text-white">
     <button>
@@ -32,7 +32,20 @@ session_start();
                 <p class = "hover:text-gray-400"><strong class ="text-red-500">Release date :</strong> <?php echo $movie['releast_date']; ?></p>                                                                                                                                                         
                 <p class = "hover:text-gray-400"><strong class ="text-red-500">Start date :</strong> <?php echo $movie['start_date']; ?></p>                                                                                                                                                         
                 <p class = "hover:text-gray-400"><strong class ="text-red-500">End date :</strong> <?php echo $movie['end_date']; ?></p>                                                                                                                                                         
-                <p class = "hover:text-gray-400"><strong class ="text-red-500">Show :</strong> <?php ?></p>                                                                                                                                                         
+                <p class = "hover:text-gray-400"><strong class ="text-red-500">Show Date: </strong></p>   
+                <?php $shows = getShowById($movie['movie_id']);
+                    // print_r ($show);
+                    // echo $movie['movie_id'];
+                foreach ($shows as $show){?>
+                    <div class="flex">
+                        <p class = "bg-gray-500 p-1 rounded-xl m-1"><?php echo $show['date'] ?></p>
+                        <p class = "bg-gray-500 p-1 rounded-xl m-1"><?php echo $show['time'] ?></p>
+                        <p class = "bg-gray-500 p-1 rounded-xl m-1"><?php echo $show['format'] ?></p>
+                        <p class = "bg-gray-500 p-1 rounded-xl m-1"><?php echo $show['cinema'] ?></p>
+                        <p class = "bg-gray-500 p-1 rounded-xl m-1"><?php echo $show['hall'] ?></p>
+                    </div>
+                <?php } ?>
+                                                                                                                                                                         
             </div>
         </div>
         <div class="flex justify-end mt-4">
