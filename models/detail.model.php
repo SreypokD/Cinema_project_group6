@@ -3,14 +3,14 @@
 require "database/database.php";
 
 
-function getMovieItem(int $id)
+function getMovieItem(int $id) : array
 {
     global $connection;
     $statement = $connection->prepare("SELECT * FROM movies  WHERE movie_id= :id");
     $statement->execute([':id' => $id]);
     return $statement->fetch();
 }
-function getsMovieId(int $id)
+function getsMovieId(int $id) : array
 {
     global $connection;
     $statement = $connection->prepare("SELECT * FROM shows INNER JOIN movies ON shows.movie_id = movies.movie_id  WHERE shows.movie_id= :id");
@@ -18,7 +18,7 @@ function getsMovieId(int $id)
     return $statement->fetch();
 }
 
-function getShow(int $id)
+function getShow(int $id) : array
 {
     global $connection;
     $statement = $connection->prepare("SELECT * FROM shows  WHERE movie_id= :id");

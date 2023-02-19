@@ -1,6 +1,6 @@
 <?php
 
-function deleteMovie(int $id)
+function deleteMovie(int $id) : bool
 {
     global $connection;
     $statement = $connection->prepare("delete from movies where movie_id = :id ");

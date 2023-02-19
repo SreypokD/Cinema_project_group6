@@ -28,7 +28,7 @@ function newMovie() : array
     $statement -> execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
-function userLogin(string $email)
+function userLogin(string $email) :bool
 {
     global $connection;
     $statement = $connection->prepare("SELECT * FROM users WHERE email=:email");
