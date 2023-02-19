@@ -25,7 +25,6 @@ function getShow(int $id) : array
     $statement->execute([':id' => $id]);
     return $statement->fetchAll();
 }
-
 function listShow() : array
 {
     global $connection;
@@ -33,3 +32,4 @@ function listShow() : array
     $statement->execute();
     return $statement->fetchAll();
 }
+

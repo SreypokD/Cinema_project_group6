@@ -2,6 +2,8 @@
 session_start();
 require "views/partials/head.php";
 require "views/partials/nav.php";
+require "models/show.model.php";
+
 ?>
 
 <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
@@ -93,7 +95,6 @@ require "views/partials/nav.php";
 
 
 
-
       <div class="mt-8">
         <span class="bg-red-600 px-4 py-1 text-white">
           MeanChey
@@ -175,7 +176,7 @@ require "views/partials/nav.php";
 
 
       <div class="mt-8 mb-8">
-        <span class="bg-red-600 px-4 py-1 text-white">
+        <span class=" bg-red-600 px-4 py-1 text-white">
           KMall
         </span>
         <hr class="h-2 mb-2">
@@ -239,25 +240,25 @@ require "views/partials/nav.php";
                 </h5>
             </div>
       <?php
-      global $connection;
+            global $connection;
 
-      $listShow = listShow();
-      if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $item = getsMovieItem($id);
-      }
-      ?>
+            $listShow = listShow();
+            if (isset($_GET['id'])) {
+              $id = $_GET['id'];
+              $item = getsMovieId($id);
+            }
+            ?>
 
         <div class="flex justify-between p-5">
           <div class="flex  flex-col justify-center mt-2">
             <p class = "hover:underline"> <strong class ="text-red-500 ">Title : </strong> <?php echo $item['title'] ?></p>
-            <p class = "hover:underline"><strong class ="text-red-500">Ticket Name : </strong> Ticket 11</p> 
+            <p class = "hover:underline"><strong class ="text-red-500">Ticket price : </strong> $3.5</p> 
             <p class = "hover:underline"><strong class ="text-red-500">Release date : </strong> <?php echo $item['release_date'] ?></p>                                                                                                                                                         
             <p class = "hover:underline"><strong class ="text-red-500">Seat : </strong> 2F </p>                                                                                                                                                         
             <p class = "hover:underline"><strong class ="text-red-500">Hall : </strong><?php echo $item['hall'] ?></p>                                                                                                                                                         
-            <p class = "hover:underline"><strong class ="text-red-500">Time : </strong> <span class = "time"></span></p>                                                                                                                                                         
+            <p class = "hover:underline"><strong class ="text-red-500">Time : </strong> <span class ="time"></span></p>                                                                                                                                                         
           </div>
-          <div class="w-36">
+          <div class="w-96">
 
             <img src="<?php echo $item['picture'] ?>" >
           </div>
@@ -265,11 +266,10 @@ require "views/partials/nav.php";
         <div class="flex justify-between mx-3 ">
           <div class="flex justify-center p-2">
             <p class = "hover:underline"><strong class ="text-red-500">Ticket :</strong></p> 
-            <input type="number" class= " ml-2 w-12 bg-red-500 text-white outline-none ">
+            <input type="number" name="ticketNumber" id="ticketNumber" onchange="multiply();" class= " ml-2 w-12 border-2 border-slate-900 outline-none ">
           </div>
-          <div class="flex justify-center p-2">
-            <p class = "hover:underline"><strong class ="text-red-500">Total :</strong> $00</p> 
-            
+          <div class="flex justify-center p-2">           
+            <div>Total price : <input type="text" name="total" id="total" class="bg-red-500 w-14 text-center text-white"></div>
           </div>
         </div>
         <div
@@ -337,6 +337,7 @@ require "views/partials/nav.php";
 </div>
 <?php } ?>
 
-<script src='views/js/confirmpruchase.js'></script>
+
+<script src='views/js/confirm.js ' defer></script>
 
 <?php require "views/partials/footer.php" ?>
